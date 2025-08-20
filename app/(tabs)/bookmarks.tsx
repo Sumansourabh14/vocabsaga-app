@@ -10,8 +10,10 @@ export default function Bookmarks() {
         alignItems: "center",
       }}
     >
-      <Text>Bookmarks</Text>
-      <Link href={`/story`}>Story</Link>
+      <Text className="text-3xl text-white font-bold">Bookmarks</Text>
+      <Link href={`/story`} className="underline text-white">
+        Story
+      </Link>
     </View>
   );
 }

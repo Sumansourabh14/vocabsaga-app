@@ -10,7 +10,7 @@ export default function Word() {
         alignItems: "center",
       }}
     >
-      <Text>Word</Text>
+      <Text className="text-white">Word</Text>
       <Link href={`/story`}>Story</Link>
     </View>
   );
