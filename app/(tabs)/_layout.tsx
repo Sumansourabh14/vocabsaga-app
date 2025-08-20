@@ -4,7 +4,7 @@ import React from "react";
 
 export default function TabsLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "black" }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: "#fff" }}>
       <Tabs.Screen
         name="bookmarks"
         options={{
@@ -14,15 +14,15 @@ export default function TabsLayout() {
           ),
         }}
       />
-      {/* <Tabs.Screen
-        name="dictionary"
+      <Tabs.Screen
+        name="word"
         options={{
-          title: "Dictionary",
+          title: "Word",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="book" size={24} color={color} />
+            <Ionicons name="text" size={24} color={color} />
           ),
         }}
-      /> */}
+      />
     </Tabs>
   );
 }

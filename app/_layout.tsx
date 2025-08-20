@@ -3,7 +3,7 @@ import { Slot } from "expo-router";
 
 const myTheme = {
   ...DarkTheme,
-  colors: { ...DarkTheme.colors, primary: "#1b7a1b" },
+  colors: { ...DarkTheme.colors, primary: "#1b7a1b", card: "#101010" },
 };
 
 export default function RootLayout() {
