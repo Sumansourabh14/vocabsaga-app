@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2",
+    "word": "dismal",
+    "word_meaning": "causing gloom or misery",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The dismal weather, with gray skies and constant drizzle, ruined our weekend picnic plans.",
+      "30": "For three days straight, the dismal weather lingered, the sky heavy with clouds, and the streets nearly empty, as if the whole town had surrendered to a shared sense of gloom."
+    }
+  },
+  {
+    "id": "3",
+    "word": "brisk",
+    "word_meaning": "quick and energetic",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "She took a brisk walk to the market, enjoying the cool morning air.",
+      "30": "She set off on a brisk walk to the market, weaving through narrow lanes, her scarf fluttering, as the shopkeepers opened their shutters and the smell of fresh bread filled the air."
+    }
+  },
+  {
+    "id": "4",
+    "word": "antics",
+    "word_meaning": "funny or silly behavior",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The puppy's playful antics, like chasing its tail and pouncing on toys, made everyone burst out laughing.",
+      "30": "During the family gathering, the puppy’s antics took center stage as it stole a sock, raced under the table, and peeked out with wide eyes, making everyone forget the serious conversation."
+    }
+  },
+  {
+    "id": "5",
+    "word": "stern",
+    "word_meaning": "serious and unrelenting in attitude",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The teacher's stern expression silenced the class within seconds of entering the room.",
+      "30": "Standing at the front, the teacher’s stern gaze swept across the room, and whispers died instantly, replaced by the uneasy shuffling of feet and the quiet rustle of opening notebooks."
+    }
+  }
+]
