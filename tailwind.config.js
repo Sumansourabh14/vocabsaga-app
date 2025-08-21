@@ -5,6 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        inter: ["Inter_18pt-Regular"],
+        interBold: ["Inter_18pt-Bold"],
         playfair: ["PlayfairDisplay-Regular"],
         playfairBold: ["PlayfairDisplay-Bold"],
       },

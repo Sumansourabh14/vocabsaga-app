@@ -14,6 +14,8 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
+    "Inter_18pt-Bold": require("../assets/fonts/Inter_18pt-Bold.ttf"),
+    "Inter_18pt-Regular": require("../assets/fonts/Inter_18pt-Regular.ttf"),
     "PlayfairDisplay-Regular": require("../assets/fonts/PlayfairDisplay-Regular.ttf"),
     "PlayfairDisplay-Bold": require("../assets/fonts/PlayfairDisplay-Bold.ttf"),
   });

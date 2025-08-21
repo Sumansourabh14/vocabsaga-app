@@ -76,12 +76,16 @@ export default function Story() {
             <Text className="text-white mb-2 text-3xl font-playfairBold">
               {data.word}
             </Text>
-            <Text className="text-white mb-8 text-lg">{data.word_meaning}</Text>
+            <Text className="text-white mb-8 text-lg font-inter">
+              {data.word_meaning}
+            </Text>
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}
             >
-              <Text style={styles.textStyle}>Done</Text>
+              <Text style={styles.textStyle} className="font-inter">
+                Done
+              </Text>
             </Pressable>
           </View>
         </View>
@@ -125,7 +129,6 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: "black",
-    fontWeight: "bold",
     textAlign: "center",
   },
 });
