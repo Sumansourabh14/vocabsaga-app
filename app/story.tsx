@@ -38,7 +38,7 @@ export default function Story() {
 
     return text.split(regex).map((part, index) =>
       index % 2 === 1 ? (
-        <Text key={index} className="text-lime-600 font-bold">
+        <Text key={index} className="text-lime-600 font-playfairBold">
           {part}
         </Text>
       ) : (
@@ -56,7 +56,7 @@ export default function Story() {
       }}
       className="px-8 bg-black"
     >
-      <Text className="text-center text-2xl text-white mb-8">
+      <Text className="text-center text-2xl text-white mb-8 font-playfair">
         {highlightWordInPassage(data.passages["15"], data.word)}
       </Text>
       <Button title="Shuffle" onPress={handleRandom} />
