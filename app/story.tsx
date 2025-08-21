@@ -1,7 +1,8 @@
 import rawPassages from "@/data/passages/p1.json";
 import { WordPassage } from "@/types";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useState } from "react";
-import { Button, Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 
 const passages: WordPassage[] = rawPassages;
 
@@ -60,8 +61,14 @@ export default function Story() {
       <Text className="text-center text-2xl text-gray-200 mb-8 font-playfair">
         {highlightWordInPassage(data.passages["15"], data.word)}
       </Text>
-      <Button title="Shuffle" onPress={handleRandom} />
-      <Button title="Show Meaning" onPress={() => setModalVisible(true)} />
+      <View className="flex flex-row gap-6">
+        <Pressable onPress={handleRandom}>
+          <Ionicons name="shuffle" size={32} color="#FFF" />
+        </Pressable>
+        <Pressable onPress={() => setModalVisible(true)}>
+          <Ionicons name="eye" size={32} color="#FFF" />
+        </Pressable>
+      </View>
 
       <Modal
         animationType="fade"
