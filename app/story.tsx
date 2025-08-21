@@ -58,6 +58,17 @@ export default function Story() {
       }}
       className="px-8 bg-[#101010]"
     >
+      <Text
+        className={`
+    ${data.difficulty_level === "easy" ? "bg-green-100 text-green-800" : ""}
+    ${data.difficulty_level === "medium" ? "bg-orange-100 text-orange-800" : ""}
+    ${data.difficulty_level === "hard" ? "bg-red-100 text-red-800" : ""}
+    ${!["easy", "medium", "hard"].includes(data.difficulty_level) ? "bg-gray-100 text-gray-800" : ""}
+    mb-8 text-sm px-2 py-1 rounded-sm font-inter
+  `}
+      >
+        {data.difficulty_level.toUpperCase()}
+      </Text>
       <Text className="text-center text-2xl text-gray-200 mb-8 font-playfair">
         {highlightWordInPassage(data.passages["15"], data.word)}
       </Text>
