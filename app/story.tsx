@@ -1,7 +1,7 @@
 import rawPassages from "@/data/passages/p1.json";
 import { WordPassage } from "@/types";
 import { useState } from "react";
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 
 const passages: WordPassage[] = rawPassages;
 
@@ -10,6 +10,13 @@ export default function Story() {
     Math.floor(Math.random() * passages.length)
   );
   const data = passages[current];
+
+  const handleRandom = () => {
+    if (passages.length === 0) return;
+
+    const randomIndex = Math.floor(Math.random() * passages.length);
+    setCurrent(randomIndex);
+  };
 
   const highlightWordInPassage = (text: string, word: string) => {
     const base = word.toLowerCase();
@@ -47,11 +54,12 @@ export default function Story() {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="px-8"
+      className="px-8 bg-black"
     >
-      <Text className="text-center text-2xl">
+      <Text className="text-center text-2xl text-white mb-8">
         {highlightWordInPassage(data.passages["15"], data.word)}
       </Text>
+      <Button title="Shuffle" onPress={handleRandom} />
     </View>
   );
 }
