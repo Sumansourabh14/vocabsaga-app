@@ -1,7 +1,8 @@
 import rawPassages from "@/data/passages/p1.json";
-import { WordPassage } from "@/types";
+import { BookmarkedWord, WordPassage } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useEffect, useState } from "react";
 import { Modal, Pressable, StyleSheet, Switch, Text, View } from "react-native";
 
 const passages: WordPassage[] = rawPassages;
@@ -12,6 +13,7 @@ export default function Story() {
   );
   const [modalVisible, setModalVisible] = useState(false);
   const [wordLimit, setWordLimit] = useState("15");
+  const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const data = passages[current];
 
   const handleRandom = () => {
@@ -49,6 +51,44 @@ export default function Story() {
       )
     );
   };
+
+  const isBookmarked = bookmarks.some((b) => b.word === data.word);
+
+  const handleBookmarking = async () => {
+    try {
+      const payload: BookmarkedWord = {
+        id: Date.now().toString(),
+        word: data.word,
+        createdAt: new Date().toISOString(),
+      };
+
+      if (isBookmarked) return;
+
+      const updatedBookmarks = [...bookmarks, payload];
+      setBookmarks(updatedBookmarks);
+      const bookmarksJsonValue = JSON.stringify(updatedBookmarks);
+
+      AsyncStorage.setItem("bookmarks", bookmarksJsonValue);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleFetchBookmarks = async () => {
+    try {
+      const res = await AsyncStorage.getItem("bookmarks");
+      if (res !== null) {
+        console.log(JSON.parse(res));
+        setBookmarks(JSON.parse(res));
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    handleFetchBookmarks();
+  }, []);
 
   return (
     <View
@@ -91,6 +131,13 @@ export default function Story() {
         </Pressable>
         <Pressable onPress={() => setModalVisible(true)}>
           <Ionicons name="eye" size={32} color="#FFF" />
+        </Pressable>
+        <Pressable onPress={handleBookmarking}>
+          <Ionicons
+            name={isBookmarked ? "bookmark" : "bookmark-outline"}
+            size={32}
+            color="#FFF"
+          />
         </Pressable>
       </View>
 
