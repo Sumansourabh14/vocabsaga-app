@@ -91,7 +91,6 @@ export default function Story() {
     try {
       const res = await AsyncStorage.getItem("bookmarks");
       if (res !== null) {
-        console.log(JSON.parse(res));
         setBookmarks(JSON.parse(res));
       }
     } catch (error) {
