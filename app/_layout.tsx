@@ -1,3 +1,4 @@
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { DarkTheme, ThemeProvider } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
@@ -42,11 +43,20 @@ export default function RootLayout() {
         style={{
           backgroundColor: "#1c1c1e",
           borderLeftWidth: 0,
-          borderRadius: 10,
+          borderRadius: 8,
+          paddingHorizontal: 12,
         }}
         contentContainerStyle={{ paddingHorizontal: 15 }}
         text1Style={{ color: "#fff", fontSize: 16, fontWeight: "600" }}
         text2Style={{ color: "#ccc", fontSize: 14 }}
+        renderLeadingIcon={() => (
+          <Ionicons
+            name="checkmark-circle"
+            size={32}
+            color="#fff"
+            style={{ marginTop: 8 }}
+          />
+        )}
       />
     ),
     info: (props) => (
@@ -55,11 +65,20 @@ export default function RootLayout() {
         style={{
           backgroundColor: "#1c1c1e",
           borderLeftWidth: 0,
-          borderRadius: 10,
+          borderRadius: 8,
+          paddingHorizontal: 12,
         }}
         contentContainerStyle={{ paddingHorizontal: 15 }}
         text1Style={{ color: "#fff", fontSize: 16, fontWeight: "600" }}
         text2Style={{ color: "#ccc", fontSize: 14 }}
+        renderLeadingIcon={() => (
+          <Ionicons
+            name="remove-circle"
+            size={32}
+            color="#fff"
+            style={{ marginTop: 8 }}
+          />
+        )}
       />
     ),
   };
