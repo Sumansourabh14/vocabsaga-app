@@ -56,21 +56,23 @@ export default function Story() {
 
   const handleBookmarking = async () => {
     try {
-      const payload: BookmarkedWord = {
-        id: Date.now().toString(),
-        word: data.word,
-        createdAt: new Date().toISOString(),
-      };
+      let updatedBookmarks: BookmarkedWord[];
 
-      if (isBookmarked) return;
+      if (isBookmarked) {
+        updatedBookmarks = bookmarks.filter((b) => b.word !== data.word);
+      } else {
+        const payload: BookmarkedWord = {
+          id: Date.now().toString(),
+          word: data.word,
+          createdAt: new Date().toISOString(),
+        };
+        updatedBookmarks = [...bookmarks, payload];
+      }
 
-      const updatedBookmarks = [...bookmarks, payload];
       setBookmarks(updatedBookmarks);
-      const bookmarksJsonValue = JSON.stringify(updatedBookmarks);
-
-      AsyncStorage.setItem("bookmarks", bookmarksJsonValue);
+      AsyncStorage.setItem("bookmarks", JSON.stringify(updatedBookmarks));
     } catch (error) {
-      console.error(error);
+      console.error(`Error handling bookmarking a word: `, error);
     }
   };
 
