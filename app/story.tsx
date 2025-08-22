@@ -1,8 +1,10 @@
 import rawPassages from "@/data/passages/p1.json";
-import { WordPassage } from "@/types";
+import { BookmarkedWord, WordPassage } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useEffect, useState } from "react";
 import { Modal, Pressable, StyleSheet, Switch, Text, View } from "react-native";
+import Toast from "react-native-toast-message";
 
 const passages: WordPassage[] = rawPassages;
 
@@ -12,6 +14,7 @@ export default function Story() {
   );
   const [modalVisible, setModalVisible] = useState(false);
   const [wordLimit, setWordLimit] = useState("15");
+  const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const data = passages[current];
 
   const handleRandom = () => {
@@ -49,6 +52,55 @@ export default function Story() {
       )
     );
   };
+
+  const isBookmarked = bookmarks.some((b) => b.word === data.word);
+
+  const handleBookmarking = async () => {
+    try {
+      let updatedBookmarks: BookmarkedWord[];
+
+      if (isBookmarked) {
+        updatedBookmarks = bookmarks.filter((b) => b.word !== data.word);
+        Toast.show({
+          type: "info",
+          text1: "Removed from bookmarks",
+          text2: data.word,
+        });
+      } else {
+        const payload: BookmarkedWord = {
+          id: Date.now().toString(),
+          word: data.word,
+          createdAt: new Date().toISOString(),
+        };
+        updatedBookmarks = [...bookmarks, payload];
+        Toast.show({
+          type: "success",
+          text1: "Added to bookmarks",
+          text2: data.word,
+        });
+      }
+
+      setBookmarks(updatedBookmarks);
+      AsyncStorage.setItem("bookmarks", JSON.stringify(updatedBookmarks));
+    } catch (error) {
+      console.error(`Error handling bookmarking a word: `, error);
+    }
+  };
+
+  const handleFetchBookmarks = async () => {
+    try {
+      const res = await AsyncStorage.getItem("bookmarks");
+      if (res !== null) {
+        setBookmarks(JSON.parse(res));
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    handleFetchBookmarks();
+  }, []);
 
   return (
     <View
@@ -91,6 +143,13 @@ export default function Story() {
         </Pressable>
         <Pressable onPress={() => setModalVisible(true)}>
           <Ionicons name="eye" size={32} color="#FFF" />
+        </Pressable>
+        <Pressable onPress={handleBookmarking}>
+          <Ionicons
+            name={isBookmarked ? "bookmark" : "bookmark-outline"}
+            size={32}
+            color="#FFF"
+          />
         </Pressable>
       </View>
 

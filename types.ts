@@ -9,3 +9,8 @@ export interface WordPassage {
     [key: string]: string;
   };
 }
+export interface BookmarkedWord {
+  id: string;
+  word: string;
+  createdAt: string;
+}
