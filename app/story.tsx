@@ -2,7 +2,7 @@ import rawPassages from "@/data/passages/p1.json";
 import { WordPassage } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useState } from "react";
-import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import { Modal, Pressable, StyleSheet, Switch, Text, View } from "react-native";
 
 const passages: WordPassage[] = rawPassages;
 
@@ -11,6 +11,7 @@ export default function Story() {
     Math.floor(Math.random() * passages.length)
   );
   const [modalVisible, setModalVisible] = useState(false);
+  const [wordLimit, setWordLimit] = useState("15");
   const data = passages[current];
 
   const handleRandom = () => {
@@ -40,7 +41,7 @@ export default function Story() {
 
     return text.split(regex).map((part, index) =>
       index % 2 === 1 ? (
-        <Text key={index} className="text-lime-600 font-playfairBold">
+        <Text key={index} className="text-[#1b7a1b] font-playfairBold">
           {part}
         </Text>
       ) : (
@@ -64,13 +65,25 @@ export default function Story() {
     ${data.difficulty_level === "medium" ? "bg-orange-100 text-orange-800" : ""}
     ${data.difficulty_level === "hard" ? "bg-red-100 text-red-800" : ""}
     ${!["easy", "medium", "hard"].includes(data.difficulty_level) ? "bg-gray-100 text-gray-800" : ""}
-    mb-8 text-sm px-2 py-1 rounded-sm font-inter
+    text-sm px-2 py-1 rounded-sm font-inter
   `}
       >
         {data.difficulty_level.toUpperCase()}
       </Text>
+      <View className="flex-row items-center mt-2 mb-6">
+        <Text className="text-white font-inter">Detailed</Text>
+        <Switch
+          trackColor={{ false: "#767577", true: "#1b7a1b" }}
+          thumbColor={wordLimit ? "#fff" : "#fff"}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={() =>
+            setWordLimit((prev) => (prev === "30" ? "15" : "30"))
+          }
+          value={wordLimit === "30"}
+        />
+      </View>
       <Text className="text-center text-2xl text-gray-200 mb-8 font-playfair">
-        {highlightWordInPassage(data.passages["15"], data.word)}
+        {highlightWordInPassage(data.passages[wordLimit], data.word)}
       </Text>
       <View className="flex flex-row gap-6">
         <Pressable onPress={handleRandom}>
