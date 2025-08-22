@@ -4,6 +4,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
 import { Modal, Pressable, StyleSheet, Switch, Text, View } from "react-native";
+import Toast from "react-native-toast-message";
 
 const passages: WordPassage[] = rawPassages;
 
@@ -60,6 +61,11 @@ export default function Story() {
 
       if (isBookmarked) {
         updatedBookmarks = bookmarks.filter((b) => b.word !== data.word);
+        Toast.show({
+          type: "info",
+          text1: "Removed from bookmarks",
+          text2: data.word,
+        });
       } else {
         const payload: BookmarkedWord = {
           id: Date.now().toString(),
@@ -67,6 +73,11 @@ export default function Story() {
           createdAt: new Date().toISOString(),
         };
         updatedBookmarks = [...bookmarks, payload];
+        Toast.show({
+          type: "success",
+          text1: "Added to bookmarks",
+          text2: data.word,
+        });
       }
 
       setBookmarks(updatedBookmarks);

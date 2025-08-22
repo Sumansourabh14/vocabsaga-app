@@ -3,6 +3,11 @@ import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import Toast, {
+  BaseToast,
+  InfoToast,
+  ToastConfig,
+} from "react-native-toast-message";
 import "../global.css";
 
 const myTheme = {
@@ -30,9 +35,39 @@ export default function RootLayout() {
     return null;
   }
 
+  const toastConfig: ToastConfig = {
+    success: (props) => (
+      <BaseToast
+        {...props}
+        style={{
+          backgroundColor: "#1c1c1e",
+          borderLeftWidth: 0,
+          borderRadius: 10,
+        }}
+        contentContainerStyle={{ paddingHorizontal: 15 }}
+        text1Style={{ color: "#fff", fontSize: 16, fontWeight: "600" }}
+        text2Style={{ color: "#ccc", fontSize: 14 }}
+      />
+    ),
+    info: (props) => (
+      <InfoToast
+        {...props}
+        style={{
+          backgroundColor: "#1c1c1e",
+          borderLeftWidth: 0,
+          borderRadius: 10,
+        }}
+        contentContainerStyle={{ paddingHorizontal: 15 }}
+        text1Style={{ color: "#fff", fontSize: 16, fontWeight: "600" }}
+        text2Style={{ color: "#ccc", fontSize: 14 }}
+      />
+    ),
+  };
+
   return (
     <ThemeProvider value={myTheme}>
       <Slot />
+      <Toast config={toastConfig} />
     </ThemeProvider>
   );
 }
