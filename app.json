@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Vocabsaga",
-    "description": "Learn new words through passages",
+    "description": "Learn new words through passages and context",
     "slug": "vocabsaga-rn",
     "version": "1.0.0",
     "orientation": "portrait",

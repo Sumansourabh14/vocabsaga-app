@@ -30,6 +30,29 @@ export default function TabsLayout() {
           headerShown: false,
         }}
       />
+      <Tabs.Screen
+        name="about"
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Ionicons
+              name="information-circle-outline"
+              size={24}
+              color={color}
+            />
+          ),
+          tabBarLabel: ({ color }) => (
+            <Text
+              style={{
+                color,
+              }}
+              className="mt-1 text-[10px] font-interBold"
+            >
+              About
+            </Text>
+          ),
+          headerShown: false,
+        }}
+      />
     </Tabs>
   );
 }
