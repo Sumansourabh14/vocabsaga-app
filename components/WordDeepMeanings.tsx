@@ -32,15 +32,15 @@ const WordDeepMeanings = ({
 
             <View>
               {meaning.definitions.map((def, i) => (
-                <View key={i}>
-                  <View className="mb-1">
+                <View key={i} className="mb-2">
+                  <View>
                     <Text className="font-interBold">{i + 1}.</Text>
                     <Text className="font-inter">{def.definition}</Text>
                   </View>
 
                   {def.example && (
-                    <Text className="text-sm mt-1">
-                      Example: `&quot;`{def.example}`&quot;`
+                    <Text className="text-sm mt-1 text-gray-500 font-inter">
+                      Example: {def.example}
                     </Text>
                   )}
 

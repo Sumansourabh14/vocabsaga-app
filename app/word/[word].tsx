@@ -1,5 +1,7 @@
 import BackBtn from "@/components/iconButtons/BackBtn";
+import BookmarkBtn from "@/components/iconButtons/BookmarkBtn";
 import WordDeepMeanings from "@/components/WordDeepMeanings";
+import useBookmarks from "@/hooks/useBookmarks";
 import useFetchWordMeaning from "@/hooks/useFetchWordMeaning";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
@@ -9,7 +11,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Word() {
   const { word } = useLocalSearchParams<{ word: string }>();
   const { data, isFetching, error } = useFetchWordMeaning(word);
-  console.log({ data, isFetching });
+  const { toggleBookmark, isBookmarked } = useBookmarks();
+
+  const bookmarked = isBookmarked(word);
+  console.log({ data, isFetching, bookmarked });
 
   if (!word) {
     return (
@@ -21,8 +26,12 @@ export default function Word() {
 
   return (
     <SafeAreaView className="flex-1">
-      <View className="mt-8 px-6">
+      <View className="mt-8 px-6 flex-row justify-between">
         <BackBtn />
+        <BookmarkBtn
+          handleBookmarking={() => toggleBookmark(word)}
+          isBookmarked={bookmarked}
+        />
       </View>
       <Text className="text-6xl font-playfairBold text-center mb-4">
         {word}
