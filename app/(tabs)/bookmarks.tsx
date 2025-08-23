@@ -25,8 +25,8 @@ export default function Bookmarks() {
         alignItems: "center",
       }}
     >
-      <Text className="text-3xl text-white font-bold">Bookmarks</Text>
-      <Link href={`/story`} className="underline text-white">
+      <Text className="text-3xl font-playfairBold">Bookmarks</Text>
+      <Link href={`/story`} className="underline">
         Story
       </Link>
       <FlatList

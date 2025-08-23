@@ -1,5 +1,5 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { DarkTheme, ThemeProvider } from "@react-navigation/native";
+import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -12,8 +12,8 @@ import Toast, {
 import "../global.css";
 
 const myTheme = {
-  ...DarkTheme,
-  colors: { ...DarkTheme.colors, primary: "#1b7a1b", card: "#101010" },
+  ...DefaultTheme,
+  colors: { ...DefaultTheme.colors },
 };
 
 SplashScreen.preventAutoHideAsync();
