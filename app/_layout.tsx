@@ -1,5 +1,6 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -15,6 +16,8 @@ const myTheme = {
   ...DefaultTheme,
   colors: { ...DefaultTheme.colors },
 };
+
+const queryClient = new QueryClient();
 
 SplashScreen.preventAutoHideAsync();
 
@@ -84,9 +87,11 @@ export default function RootLayout() {
   };
 
   return (
-    <ThemeProvider value={myTheme}>
-      <Slot />
-      <Toast config={toastConfig} />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider value={myTheme}>
+        <Slot />
+        <Toast config={toastConfig} />
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }

@@ -30,24 +30,6 @@ export default function TabsLayout() {
           headerShown: false,
         }}
       />
-      <Tabs.Screen
-        name="word"
-        options={{
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="text" size={24} color={color} />
-          ),
-          tabBarLabel: ({ color }) => (
-            <Text
-              style={{
-                color,
-              }}
-              className="mt-1 text-[10px] font-interBold"
-            >
-              Word
-            </Text>
-          ),
-        }}
-      />
     </Tabs>
   );
 }
