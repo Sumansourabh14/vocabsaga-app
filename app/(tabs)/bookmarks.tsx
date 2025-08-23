@@ -1,7 +1,22 @@
+import { fetchBookmarks } from "@/services/bookmarking";
+import { BookmarkedWord } from "@/types";
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { useEffect, useState } from "react";
+import { FlatList, Text, View } from "react-native";
 
 export default function Bookmarks() {
+  const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
+
+  const getBookmarks = async () => {
+    const res = await fetchBookmarks();
+    console.log({ res });
+    setBookmarks(res);
+  };
+
+  useEffect(() => {
+    getBookmarks();
+  }, []);
+
   return (
     <View
       style={{
@@ -14,6 +29,12 @@ export default function Bookmarks() {
       <Link href={`/story`} className="underline text-white">
         Story
       </Link>
+      <FlatList
+        data={bookmarks}
+        renderItem={({ item }) => <Text>{item.word}</Text>}
+        keyExtractor={(item) => item.id}
+        ListEmptyComponent={<Text>No words.</Text>}
+      />
     </View>
   );
 }
