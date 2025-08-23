@@ -18,22 +18,38 @@ export default function Bookmarks() {
   }, []);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text className="text-3xl font-playfairBold">Bookmarks</Text>
-      <Link href={`/story`} className="underline">
+    <View className="flex-1">
+      <Text className="text-4xl font-playfairBold text-center mt-4">
+        Bookmarks
+      </Text>
+      <Link href={`/story`} className="underline text-center mb-4">
         Story
       </Link>
+
       <FlatList
-        data={bookmarks}
-        renderItem={({ item }) => <Text>{item.word}</Text>}
+        data={bookmarks.reverse()}
         keyExtractor={(item) => item.id}
-        ListEmptyComponent={<Text>No words.</Text>}
+        renderItem={({ item }) => (
+          <View className="flex-1 m-2 rounded-lg bg-zinc-800 px-4 py-6">
+            <Text className="text-xl font-interBold text-white">
+              {item.word}
+            </Text>
+            <Text className="text-sm text-neutral-400 mt-2">
+              {new Date(item.createdAt).toLocaleDateString()}
+            </Text>
+          </View>
+        )}
+        numColumns={2}
+        columnWrapperStyle={{ justifyContent: "space-between" }}
+        contentContainerStyle={{
+          paddingHorizontal: 8,
+          paddingVertical: 8,
+        }}
+        ListEmptyComponent={
+          <Text className="text-center text-base text-neutral-500 mt-10">
+            No words bookmarked yet.
+          </Text>
+        }
       />
     </View>
   );
