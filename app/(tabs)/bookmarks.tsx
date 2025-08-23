@@ -1,9 +1,13 @@
 import { fetchBookmarks } from "@/services/bookmarking";
 import { BookmarkedWord } from "@/types";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { Link } from "expo-router";
 import { useEffect, useState } from "react";
 import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+dayjs.extend(relativeTime);
 
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
@@ -35,7 +39,7 @@ export default function Bookmarks() {
               {item.word}
             </Text>
             <Text className="text-sm text-neutral-400 mt-2">
-              {new Date(item.createdAt).toLocaleDateString()}
+              {dayjs(item.createdAt).fromNow()}
             </Text>
           </View>
         )}
