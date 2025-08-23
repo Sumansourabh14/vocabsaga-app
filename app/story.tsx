@@ -109,7 +109,7 @@ export default function Story() {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="px-8 bg-[#101010]"
+      className="px-8"
     >
       <Text
         className={`
@@ -123,7 +123,7 @@ export default function Story() {
         {data.difficulty_level.toUpperCase()}
       </Text>
       <View className="flex-row items-center mt-2 mb-6">
-        <Text className="text-white font-inter">Detailed</Text>
+        <Text className="font-inter">Detailed</Text>
         <Switch
           trackColor={{ false: "#767577", true: "#1b7a1b" }}
           thumbColor={wordLimit ? "#fff" : "#fff"}
@@ -134,21 +134,20 @@ export default function Story() {
           value={wordLimit === "30"}
         />
       </View>
-      <Text className="text-center text-2xl text-gray-200 mb-8 font-playfair">
+      <Text className="text-center text-2xl mb-8 font-playfair">
         {highlightWordInPassage(data.passages[wordLimit], data.word)}
       </Text>
       <View className="flex flex-row gap-6">
         <Pressable onPress={handleRandom}>
-          <Ionicons name="shuffle" size={32} color="#FFF" />
+          <Ionicons name="shuffle" size={32} />
         </Pressable>
         <Pressable onPress={() => setModalVisible(true)}>
-          <Ionicons name="eye" size={32} color="#FFF" />
+          <Ionicons name="eye" size={32} />
         </Pressable>
         <Pressable onPress={handleBookmarking}>
           <Ionicons
             name={isBookmarked ? "bookmark" : "bookmark-outline"}
             size={32}
-            color="#FFF"
           />
         </Pressable>
       </View>
@@ -163,12 +162,8 @@ export default function Story() {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text className="text-white mb-4 text-4xl font-playfairBold">
-              {data.word}
-            </Text>
-            <Text className="text-white mb-8 text-xl font-inter">
-              {data.word_meaning}
-            </Text>
+            <Text className="mb-4 text-4xl font-playfairBold">{data.word}</Text>
+            <Text className="mb-8 text-xl font-inter">{data.word_meaning}</Text>
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}
@@ -192,7 +187,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     borderRadius: 8,
     padding: 35,
     alignItems: "center",
