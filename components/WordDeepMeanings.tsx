@@ -1,5 +1,5 @@
 import { DictionaryEntry } from "@/types";
-import { ScrollView, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 const WordDeepMeanings = ({
   phonetic,
@@ -8,7 +8,7 @@ const WordDeepMeanings = ({
   meanings,
 }: DictionaryEntry) => {
   return (
-    <ScrollView className="p-8">
+    <View className="px-8 pt-4">
       {/* Phonetic */}
       {phonetic && (
         <Text className="text-gray-600 text-lg font-inter">/{phonetic}/</Text>
@@ -84,7 +84,7 @@ const WordDeepMeanings = ({
           </View>
         ))}
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
