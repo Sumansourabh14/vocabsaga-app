@@ -7,6 +7,7 @@ import { Link } from "expo-router";
 import { useEffect, useState } from "react";
 import { FlatList, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Toast from "react-native-toast-message";
 
 dayjs.extend(relativeTime);
 
@@ -18,10 +19,25 @@ export default function Bookmarks() {
     setBookmarks(res);
   };
 
-  const removeBookmark = (id: string) => {
-    const updatedBookmarks = bookmarks.filter((b) => b.id !== id);
-    setBookmarks(updatedBookmarks);
-    updateBookmarks(updatedBookmarks);
+  const removeBookmark = async (id: string, word: string) => {
+    try {
+      const updatedBookmarks = bookmarks.filter((b) => b.id !== id);
+      setBookmarks(updatedBookmarks);
+      await updateBookmarks(updatedBookmarks);
+
+      Toast.show({
+        type: "info",
+        text1: "Removed from bookmarks",
+        text2: word,
+      });
+    } catch (error) {
+      console.log("Error removing bookmark:", error);
+      Toast.show({
+        type: "error",
+        text1: "Failed to remove bookmark",
+        text2: word,
+      });
+    }
   };
 
   useEffect(() => {
@@ -44,7 +60,7 @@ export default function Bookmarks() {
           <View className="flex-1 m-2 rounded-lg bg-zinc-800 px-4 py-6 relative">
             <Pressable
               className="absolute top-2 right-2"
-              onPress={() => removeBookmark(item.id)}
+              onPress={() => removeBookmark(item.id, item.word)}
             >
               <Ionicons name="bookmark" size={24} color="white" />
             </Pressable>
