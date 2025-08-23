@@ -18,6 +18,15 @@ export default function Search() {
           className="border-hairline rounded-md px-4 py-4 font-inter flex-1 mr-2"
           value={text}
           onChangeText={onChangeText}
+          returnKeyType="search"
+          onSubmitEditing={() => {
+            if (text.length > 0) {
+              router.navigate({
+                pathname: "/word/[word]",
+                params: { word: text.toLowerCase() },
+              });
+            }
+          }}
         />
         <Pressable
           onPress={() =>
@@ -28,6 +37,8 @@ export default function Search() {
           }
           disabled={text.length === 0}
           className={text.length === 0 ? "opacity-40" : "opacity-100"}
+          accessibilityLabel="Search word"
+          accessibilityRole="button"
         >
           <Ionicons name="search-sharp" size={32} />
         </Pressable>
