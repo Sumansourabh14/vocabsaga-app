@@ -3,13 +3,13 @@ import { BookmarkedWord } from "@/types";
 import { Link } from "expo-router";
 import { useEffect, useState } from "react";
 import { FlatList, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
 
   const getBookmarks = async () => {
     const res = await fetchBookmarks();
-    console.log({ res });
     setBookmarks(res);
   };
 
@@ -18,12 +18,12 @@ export default function Bookmarks() {
   }, []);
 
   return (
-    <View className="flex-1">
-      <Text className="text-4xl font-playfairBold text-center mt-4">
+    <SafeAreaView className="flex-1">
+      <Text className="text-4xl font-playfairBold text-center mt-8 mb-4">
         Bookmarks
       </Text>
-      <Link href={`/story`} className="underline text-center mb-4">
-        Story
+      <Link href={`/story`} className="underline text-center mb-4 font-inter">
+        Learn more words!
       </Link>
 
       <FlatList
@@ -51,6 +51,6 @@ export default function Bookmarks() {
           </Text>
         }
       />
-    </View>
+    </SafeAreaView>
   );
 }

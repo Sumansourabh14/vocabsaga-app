@@ -12,6 +12,7 @@ export default function TabsLayout() {
           tabBarIcon: ({ color }) => (
             <Ionicons name="bookmarks" size={24} color={color} />
           ),
+          headerShown: false,
         }}
       />
       <Tabs.Screen
