@@ -13,21 +13,30 @@ export default function Search() {
     <SafeAreaView className="flex-1">
       <ScreenTitle title="Find a word" />
       <View className="px-4 py-4 flex-row items-center">
-        <TextInput
-          placeholder="Which word are you looking for?"
-          className="border-hairline rounded-md px-4 py-4 font-inter flex-1 mr-2"
-          value={text}
-          onChangeText={onChangeText}
-          returnKeyType="search"
-          onSubmitEditing={() => {
-            if (text.length > 0) {
-              router.navigate({
-                pathname: "/word/[word]",
-                params: { word: text.toLowerCase() },
-              });
-            }
-          }}
-        />
+        <View className="flex-1 border-hairline rounded-md flex-row items-center mr-2">
+          <TextInput
+            placeholder="Type any word here and search!"
+            className="py-4 pl-2 font-inter flex-1"
+            value={text}
+            onChangeText={onChangeText}
+            returnKeyType="search"
+            onSubmitEditing={() => {
+              if (text.length > 0) {
+                router.navigate({
+                  pathname: "/word/[word]",
+                  params: { word: text.toLowerCase() },
+                });
+              }
+            }}
+            autoCapitalize="none"
+            autoCorrect={false}
+          />
+          {text.length > 0 && (
+            <Pressable onPress={() => onChangeText("")} className="mx-2">
+              <Ionicons name="close-circle" size={22} color="gray" />
+            </Pressable>
+          )}
+        </View>
         <Pressable
           onPress={() =>
             router.navigate({
