@@ -1,16 +1,31 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Tabs } from "expo-router";
 import React from "react";
+import { Text } from "react-native";
 
 export default function TabsLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "#000" }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: "#000",
+        tabBarStyle: { height: 70 },
+      }}
+    >
       <Tabs.Screen
         name="bookmarks"
         options={{
-          title: "Bookmarks",
           tabBarIcon: ({ color }) => (
             <Ionicons name="bookmarks" size={24} color={color} />
+          ),
+          tabBarLabel: ({ color }) => (
+            <Text
+              style={{
+                color,
+              }}
+              className="mt-1 text-[10px] font-interBold"
+            >
+              Bookmarks
+            </Text>
           ),
           headerShown: false,
         }}
@@ -18,9 +33,18 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="word"
         options={{
-          title: "Word",
           tabBarIcon: ({ color }) => (
             <Ionicons name="text" size={24} color={color} />
+          ),
+          tabBarLabel: ({ color }) => (
+            <Text
+              style={{
+                color,
+              }}
+              className="mt-1 text-[10px] font-interBold"
+            >
+              Word
+            </Text>
           ),
         }}
       />
