@@ -1,8 +1,9 @@
+import BackBtn from "@/components/iconButtons/BackBtn";
 import WordDeepMeanings from "@/components/WordDeepMeanings";
 import useFetchWordMeaning from "@/hooks/useFetchWordMeaning";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
-import { ActivityIndicator, Text } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Word() {
@@ -20,7 +21,10 @@ export default function Word() {
 
   return (
     <SafeAreaView className="flex-1">
-      <Text className="text-6xl font-playfairBold text-center mt-8 mb-4">
+      <View className="mt-8 px-6">
+        <BackBtn />
+      </View>
+      <Text className="text-6xl font-playfairBold text-center mb-4">
         {word}
       </Text>
       {isFetching && <ActivityIndicator size="large" color="white" />}
