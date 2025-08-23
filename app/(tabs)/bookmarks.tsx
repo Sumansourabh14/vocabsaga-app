@@ -3,9 +3,9 @@ import { BookmarkedWord } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useEffect, useState } from "react";
-import { FlatList, Pressable, Text, View } from "react-native";
+import { FlatList, Pressable, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
 
@@ -13,6 +13,7 @@ dayjs.extend(relativeTime);
 
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
+  const router = useRouter();
 
   const getBookmarks = async () => {
     const res = await fetchBookmarks();
@@ -57,10 +58,21 @@ export default function Bookmarks() {
         data={bookmarks.reverse()}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View className="flex-1 m-2 rounded-lg bg-zinc-800 px-4 py-6 relative">
+          <Pressable
+            onPress={() =>
+              router.navigate({
+                pathname: `/word/[word]`,
+                params: { word: item.word },
+              })
+            }
+            className="flex-1 m-2 rounded-lg bg-zinc-800 px-4 py-6 relative"
+          >
             <Pressable
               className="absolute top-2 right-2"
-              onPress={() => removeBookmark(item.id, item.word)}
+              onPress={(e) => {
+                e.stopPropagation();
+                removeBookmark(item.id, item.word);
+              }}
             >
               <Ionicons name="bookmark" size={24} color="white" />
             </Pressable>
@@ -70,7 +82,7 @@ export default function Bookmarks() {
             <Text className="text-sm text-neutral-400 mt-2">
               {dayjs(item.createdAt).fromNow()}
             </Text>
-          </View>
+          </Pressable>
         )}
         numColumns={2}
         columnWrapperStyle={{ justifyContent: "space-between" }}
