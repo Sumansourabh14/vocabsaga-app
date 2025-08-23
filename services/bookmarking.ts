@@ -1,3 +1,4 @@
+import { BookmarkedWord } from "@/types";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const fetchBookmarks = async () => {
@@ -15,5 +16,14 @@ export const fetchBookmarks = async () => {
   } catch (error) {
     console.log(`Error fetching bookmarks from user's device:`, error);
     return [];
+  }
+};
+
+export const updateBookmarks = async (bookmarks: BookmarkedWord[]) => {
+  try {
+    const updatedBookmarks = JSON.stringify(bookmarks);
+    await AsyncStorage.setItem("bookmarks", updatedBookmarks);
+  } catch (error) {
+    console.log("Error saving bookmarks:", error);
   }
 };

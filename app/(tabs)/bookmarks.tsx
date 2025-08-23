@@ -1,10 +1,11 @@
-import { fetchBookmarks } from "@/services/bookmarking";
+import { fetchBookmarks, updateBookmarks } from "@/services/bookmarking";
 import { BookmarkedWord } from "@/types";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { Link } from "expo-router";
 import { useEffect, useState } from "react";
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 dayjs.extend(relativeTime);
@@ -15,6 +16,12 @@ export default function Bookmarks() {
   const getBookmarks = async () => {
     const res = await fetchBookmarks();
     setBookmarks(res);
+  };
+
+  const removeBookmark = (id: string) => {
+    const updatedBookmarks = bookmarks.filter((b) => b.id !== id);
+    setBookmarks(updatedBookmarks);
+    updateBookmarks(updatedBookmarks);
   };
 
   useEffect(() => {
@@ -34,7 +41,13 @@ export default function Bookmarks() {
         data={bookmarks.reverse()}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View className="flex-1 m-2 rounded-lg bg-zinc-800 px-4 py-6">
+          <View className="flex-1 m-2 rounded-lg bg-zinc-800 px-4 py-6 relative">
+            <Pressable
+              className="absolute top-2 right-2"
+              onPress={() => removeBookmark(item.id)}
+            >
+              <Ionicons name="bookmark" size={24} color="white" />
+            </Pressable>
             <Text className="text-xl font-interBold text-white">
               {item.word}
             </Text>
