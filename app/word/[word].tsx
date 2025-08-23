@@ -14,7 +14,6 @@ export default function Word() {
   const { toggleBookmark, isBookmarked } = useBookmarks();
 
   const bookmarked = isBookmarked(word);
-  console.log({ data, isFetching, bookmarked });
 
   if (!word) {
     return (
@@ -36,10 +35,17 @@ export default function Word() {
       <Text className="text-6xl font-playfairBold text-center mb-4">
         {word}
       </Text>
-      {isFetching && <ActivityIndicator size="large" color="white" />}
+      {isFetching && (
+        <View className="flex-1 justify-center items-center">
+          <ActivityIndicator size="large" color="black" />
+          <Text className="text-center text-md font-inter mt-4">
+            Looking up this word...
+          </Text>
+        </View>
+      )}
       {error && (
-        <Text className="text-red-400 text-center mt-4">
-          Failed to load meaning
+        <Text className="text-red-400 text-center mt-4 font-inter">
+          Couldn&apos;t find definitions for this word
         </Text>
       )}
 
