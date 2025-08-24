@@ -9,6 +9,12 @@ import Toast from "react-native-toast-message";
 
 const passages: WordPassage[] = rawPassages;
 
+const difficultyColors: Record<string, string> = {
+  easy: "bg-green-100 text-green-800",
+  medium: "bg-orange-100 text-orange-800",
+  hard: "bg-red-100 text-red-800",
+};
+
 export default function Story() {
   const [current, setCurrent] = useState(
     Math.floor(Math.random() * passages.length)
@@ -117,14 +123,12 @@ export default function Story() {
       </View>
       <Text
         className={`
-    ${data.difficulty_level === "easy" ? "bg-green-100 text-green-800" : ""}
-    ${data.difficulty_level === "medium" ? "bg-orange-100 text-orange-800" : ""}
-    ${data.difficulty_level === "hard" ? "bg-red-100 text-red-800" : ""}
-    ${!["easy", "medium", "hard"].includes(data.difficulty_level) ? "bg-gray-100 text-gray-800" : ""}
-    text-sm px-2 py-1 rounded-sm font-inter
+    ${difficultyColors[data.difficulty_level] || "bg-gray-100 text-gray-800"}
+    text-sm px-2 py-1 rounded-md font-inter
   `}
       >
-        {data.difficulty_level.toUpperCase()}
+        {data.difficulty_level.slice(0, 1).toUpperCase()}
+        {data.difficulty_level.slice(1)}
       </Text>
 
       <View className="flex-row items-center gap-2 my-8">
@@ -135,7 +139,7 @@ export default function Story() {
           }`}
         >
           <Text
-            className={` ${
+            className={`text-sm ${
               wordLimit === "15"
                 ? "text-white font-interBold"
                 : "text-gray-700 font-inter"
@@ -152,7 +156,7 @@ export default function Story() {
           }`}
         >
           <Text
-            className={`${
+            className={`text-sm ${
               wordLimit === "30"
                 ? "text-white font-interBold"
                 : "text-gray-700 font-inter"
