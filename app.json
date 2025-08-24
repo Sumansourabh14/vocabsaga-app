@@ -17,7 +17,8 @@
         "foregroundImage": "./assets/images/vocabsaga-full-light.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.sumsourabh14.vocabsaga"
     },
     "web": {
       "bundler": "metro",
@@ -38,6 +39,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e1446441-530e-4f48-8dd0-3ae7bc626b00"
+      }
+    },
+    "owner": "sumsourabh14"
   }
 }
