@@ -3,6 +3,7 @@ import rawPassages from "@/data/passages/p1.json";
 import { BookmarkedWord, WordPassage } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 import Toast from "react-native-toast-message";
@@ -23,6 +24,7 @@ export default function Story() {
   const [wordLimit, setWordLimit] = useState("15");
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const data = passages[current];
+  const router = useRouter();
 
   const handleRandom = () => {
     if (passages.length === 0) return;
@@ -195,19 +197,31 @@ export default function Story() {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text className="mb-4 text-4xl font-playfairBold text-center">
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Ionicons name="close-circle-outline" size={20} />
+            </Pressable>
+            <Text className="py-4 text-4xl font-playfairBold text-center">
               {data.word}
             </Text>
             <Text className="mb-8 text-lg font-inter text-center">
               {data.word_meaning}
             </Text>
             <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}
+              onPress={() =>
+                router.push({
+                  pathname: `/word/[word]`,
+                  params: {
+                    word: data.word,
+                  },
+                })
+              }
+              className="flex-row gap-2 border-hairline rounded-lg px-4 py-2 items-center"
             >
-              <Text style={styles.textStyle} className="font-interBold text-sm">
-                Done
-              </Text>
+              <Text className="font-inter text-sm">See more</Text>
+              <Ionicons name="arrow-forward-circle" size={20} />
             </Pressable>
           </View>
         </View>
@@ -238,10 +252,9 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button: {
-    borderRadius: 4,
-    paddingHorizontal: 20,
-    paddingVertical: 8,
-    elevation: 2,
+    position: "absolute",
+    right: 8,
+    top: 8,
   },
   buttonOpen: {
     backgroundColor: "#F194FF",
