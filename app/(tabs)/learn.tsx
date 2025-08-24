@@ -15,7 +15,7 @@ export default function Learn() {
           onPress={() => router.push("/story")}
           accessibilityRole="button"
           accessibilityLabel="Learn new words through passages"
-          className="bg-white rounded-2xl shadow-md p-8 mb-4 flex-row items-center"
+          className="bg-white rounded-xl border-hairline px-6 py-8 mb-4 flex-row items-center"
         >
           <Ionicons
             name="book-outline"
