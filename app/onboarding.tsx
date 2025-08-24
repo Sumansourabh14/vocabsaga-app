@@ -1,3 +1,4 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
@@ -23,7 +24,10 @@ export default function Onboarding() {
 
       <TouchableOpacity
         className="bg-black px-10 py-4 rounded-xl mb-4"
-        onPress={() => router.push("/(tabs)/learn")}
+        onPress={async () => {
+          await AsyncStorage.setItem("isFirstLaunch", "false");
+          router.replace("/learn");
+        }}
       >
         <Text className="text-white text-2xl font-interBold text-center">
           Start Learning
