@@ -195,8 +195,12 @@ export default function Story() {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text className="mb-4 text-4xl font-playfairBold">{data.word}</Text>
-            <Text className="mb-8 text-xl font-inter">{data.word_meaning}</Text>
+            <Text className="mb-4 text-4xl font-playfairBold text-center">
+              {data.word}
+            </Text>
+            <Text className="mb-8 text-lg font-inter text-center">
+              {data.word_meaning}
+            </Text>
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}
