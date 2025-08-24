@@ -3,7 +3,7 @@ import { BookmarkedWord } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { FlatList, Pressable, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -50,9 +50,6 @@ export default function Bookmarks() {
       <Text className="text-4xl font-playfairBold text-center mt-8 mb-4">
         Bookmarks
       </Text>
-      <Link href={`/story`} className="underline text-center mb-4 font-inter">
-        Learn more words!
-      </Link>
 
       <FlatList
         data={bookmarks.reverse()}
@@ -65,7 +62,7 @@ export default function Bookmarks() {
                 params: { word: item.word },
               })
             }
-            className="flex-1 m-2 rounded-lg bg-zinc-800 px-4 py-6 relative"
+            className="flex-1 m-2 rounded-lg px-4 py-6 relative bg-white border-hairline"
           >
             <Pressable
               className="absolute top-2 right-2"
@@ -74,12 +71,10 @@ export default function Bookmarks() {
                 removeBookmark(item.id, item.word);
               }}
             >
-              <Ionicons name="bookmark" size={24} color="white" />
+              <Ionicons name="bookmark" size={24} color="black" />
             </Pressable>
-            <Text className="text-xl font-interBold text-white">
-              {item.word}
-            </Text>
-            <Text className="text-sm text-neutral-400 mt-2">
+            <Text className="text-xl font-interBold">{item.word}</Text>
+            <Text className="text-sm text-neutral-500 mt-2">
               {dayjs(item.createdAt).fromNow()}
             </Text>
           </Pressable>
