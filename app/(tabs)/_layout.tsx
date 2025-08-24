@@ -12,6 +12,25 @@ export default function TabsLayout() {
       }}
     >
       <Tabs.Screen
+        name="learn"
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="bulb" size={24} color={color} />
+          ),
+          tabBarLabel: ({ color }) => (
+            <Text
+              style={{
+                color,
+              }}
+              className="mt-1 text-[10px] font-interBold"
+            >
+              Learn
+            </Text>
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
         name="bookmarks"
         options={{
           tabBarIcon: ({ color }) => (
