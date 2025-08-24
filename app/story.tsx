@@ -1,9 +1,10 @@
+import BackBtn from "@/components/iconButtons/BackBtn";
 import rawPassages from "@/data/passages/p1.json";
 import { BookmarkedWord, WordPassage } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
-import { Modal, Pressable, StyleSheet, Switch, Text, View } from "react-native";
+import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 import Toast from "react-native-toast-message";
 
 const passages: WordPassage[] = rawPassages;
@@ -109,8 +110,11 @@ export default function Story() {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="px-8"
+      className="px-8 relative"
     >
+      <View className="mt-8 px-6 flex-row justify-between absolute left-0 top-10">
+        <BackBtn />
+      </View>
       <Text
         className={`
     ${data.difficulty_level === "easy" ? "bg-green-100 text-green-800" : ""}
@@ -122,18 +126,43 @@ export default function Story() {
       >
         {data.difficulty_level.toUpperCase()}
       </Text>
-      <View className="flex-row items-center mt-2 mb-6">
-        <Text className="font-inter">Detailed</Text>
-        <Switch
-          trackColor={{ false: "#767577", true: "#1b7a1b" }}
-          thumbColor={wordLimit ? "#fff" : "#fff"}
-          ios_backgroundColor="#3e3e3e"
-          onValueChange={() =>
-            setWordLimit((prev) => (prev === "30" ? "15" : "30"))
-          }
-          value={wordLimit === "30"}
-        />
+
+      <View className="flex-row items-center gap-2 my-8">
+        <Pressable
+          onPress={() => setWordLimit("15")}
+          className={`px-6 py-2 rounded-lg border ${
+            wordLimit === "15" ? "bg-black" : "border-gray-300"
+          }`}
+        >
+          <Text
+            className={` ${
+              wordLimit === "15"
+                ? "text-white font-interBold"
+                : "text-gray-700 font-inter"
+            }`}
+          >
+            Short
+          </Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => setWordLimit("30")}
+          className={`px-4 py-2 rounded-lg border ${
+            wordLimit === "30" ? "bg-black" : "border-gray-300"
+          }`}
+        >
+          <Text
+            className={`${
+              wordLimit === "30"
+                ? "text-white font-interBold"
+                : "text-gray-700 font-inter"
+            }`}
+          >
+            Detailed
+          </Text>
+        </Pressable>
       </View>
+
       <Text className="text-center text-2xl mb-8 font-inter">
         {highlightWordInPassage(data.passages[wordLimit], data.word)}
       </Text>
