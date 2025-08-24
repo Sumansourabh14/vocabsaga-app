@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+# Vocabsaga
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Learn words through context, now on Android!
 
-## Get started
+VocabSaga is a simple and engaging vocabulary learning app designed to make learning new words fun and effortless. 
 
-1. Install dependencies
+Instead of memorizing words in isolation, you discover them through **short passages and real-world context**.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## Features
 
-   ```bash
-   npx expo start
-   ```
+- **Learn Through Stories**  
+  Each word is introduced inside a short passage, so you can understand its meaning naturally.
 
-In the output, you'll find options to open the app in a
+- **Word Meanings On Tap**  
+  Tap a word to instantly see its definition, usage, and example sentences.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Save Words to Your List**  
+  Keep track of words you want to revisit later
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Minimal & Clean Design**  
+  Focus on learning with a distraction-free interface.
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## Who Is It For?
 
-```bash
-npm run reset-project
-```
+- Anyone who enjoys learning words.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Built by Suman Sourabh, an avid reader & writer.
