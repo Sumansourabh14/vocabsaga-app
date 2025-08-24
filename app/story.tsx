@@ -44,7 +44,7 @@ export default function Story() {
 
     return text.split(regex).map((part, index) =>
       index % 2 === 1 ? (
-        <Text key={index} className="text-[#1b7a1b] font-playfairBold">
+        <Text key={index} className="text-[#1b7a1b] font-interBold">
           {part}
         </Text>
       ) : (
@@ -134,7 +134,7 @@ export default function Story() {
           value={wordLimit === "30"}
         />
       </View>
-      <Text className="text-center text-2xl mb-8 font-playfair">
+      <Text className="text-center text-2xl mb-8 font-inter">
         {highlightWordInPassage(data.passages[wordLimit], data.word)}
       </Text>
       <View className="flex flex-row gap-6">
