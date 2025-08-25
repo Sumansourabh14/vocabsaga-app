@@ -16,10 +16,10 @@ const SocialNavLink = ({ link, icon, title }: SocialNavLinkProps) => {
     <Link href={externalLink} asChild>
       <Pressable className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded">
         <View className="flex-row items-center">
-          <Ionicons name={icon} size={24} className="mr-2" color={"grey"} />
-          <Text className="font-playfairBold text-lg">{title}</Text>
+          <Ionicons name={icon} size={22} className="mr-2" />
+          <Text className="font-interBold text-lg">{title}</Text>
         </View>
-        <Ionicons name="arrow-forward-sharp" size={24} color={"gray"} />
+        <Ionicons name="arrow-forward-sharp" size={22} color={"gray"} />
       </Pressable>
     </Link>
   );
