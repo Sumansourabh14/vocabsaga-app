@@ -1,3 +1,4 @@
+import ScreenTitle from "@/components/text/ScreenTitle";
 import { fetchBookmarks, updateBookmarks } from "@/services/bookmarking";
 import { BookmarkedWord } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -47,9 +48,7 @@ export default function Bookmarks() {
 
   return (
     <SafeAreaView className="flex-1">
-      <Text className="text-4xl font-playfairBold text-center mt-8 mb-4">
-        Bookmarks
-      </Text>
+      <ScreenTitle title="Bookmarks" />
 
       <FlatList
         data={bookmarks.reverse()}
