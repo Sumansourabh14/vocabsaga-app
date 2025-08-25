@@ -16,6 +16,7 @@ export default function Search() {
         <View className="flex-1 border-hairline rounded-md flex-row items-center mr-2">
           <TextInput
             placeholder="Type any word here and search!"
+            placeholderTextColor="gray"
             className="py-4 pl-2 font-inter flex-1"
             value={text}
             onChangeText={onChangeText}

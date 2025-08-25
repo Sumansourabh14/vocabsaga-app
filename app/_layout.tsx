@@ -36,10 +36,6 @@ export default function RootLayout() {
     }
   };
 
-  useEffect(() => {
-    checkIfFirstLaunched();
-  }, []);
-
   const [loaded, error] = useFonts({
     "Inter_18pt-Bold": require("../assets/fonts/Inter_18pt-Bold.ttf"),
     "Inter_18pt-Regular": require("../assets/fonts/Inter_18pt-Regular.ttf"),
@@ -49,6 +45,7 @@ export default function RootLayout() {
 
   useEffect(() => {
     if (loaded || error) {
+      checkIfFirstLaunched();
       SplashScreen.hideAsync();
     }
   }, [loaded, error]);

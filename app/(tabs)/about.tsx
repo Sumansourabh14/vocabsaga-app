@@ -2,18 +2,14 @@ import appData from "@/app.json";
 import SocialNavLink from "@/components/socials/SocialNavLink";
 import ScreenTitle from "@/components/text/ScreenTitle";
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function About() {
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView className="flex-1">
       <View className="items-center flex-1">
-        <Image
-          source={require("@/assets/images/vocabsaga-full-light.png")}
-          style={{ width: 240, height: 100, resizeMode: "contain" }}
-        />
-        <ScreenTitle title="About" />
+        <ScreenTitle title="Vocabsaga" />
         <Text className="text-gray-700 font-inter">
           {appData.expo.description}
         </Text>
