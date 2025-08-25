@@ -10,9 +10,7 @@ export default function About() {
     <SafeAreaView className="flex-1">
       <View className="items-center flex-1">
         <ScreenTitle title="Vocabsaga" />
-        <Text className="text-gray-700 font-inter">
-          {appData.expo.description}
-        </Text>
+        <Text className="font-inter">{appData.expo.description}</Text>
 
         <View className="w-full mt-12 px-4 border-t-hairline">
           <SocialNavLink
@@ -32,7 +30,7 @@ export default function About() {
           />
         </View>
       </View>
-      <Text className="text-gray-500 text-center font-inter">
+      <Text className="text-gray-500 text-center font-inter text-sm">
         Version {appData.expo.version}
       </Text>
     </SafeAreaView>
