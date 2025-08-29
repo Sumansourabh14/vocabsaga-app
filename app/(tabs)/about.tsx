@@ -49,11 +49,11 @@ export default function About() {
               <Ionicons name="arrow-forward-sharp" size={22} color={"gray"} />
             </Pressable>
           </Link>
-          <Link href={`/termsOfService`} asChild>
+          <Link href={`/termsOfUse`} asChild>
             <Pressable className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded">
               <View className="flex-row items-center">
                 <Ionicons name="documents" size={22} className="mr-2" />
-                <Text className="font-interBold text-lg">Terms of Service</Text>
+                <Text className="font-interBold text-lg">Terms of Use</Text>
               </View>
               <Ionicons name="arrow-forward-sharp" size={22} color={"gray"} />
             </Pressable>
