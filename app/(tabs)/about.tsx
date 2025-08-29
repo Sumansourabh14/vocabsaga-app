@@ -11,7 +11,7 @@ export default function About() {
   return (
     <SafeAreaView className="flex-1">
       <View className="items-center flex-1">
-        <ScreenTitle title="Vocabsaga" />
+        <ScreenTitle title="About" />
         <Text className="font-inter">{appData.expo.description}</Text>
 
         <View className="w-full mt-12 px-4 border-t-hairline">
@@ -40,11 +40,11 @@ export default function About() {
             <Pressable className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded">
               <View className="flex-row items-center">
                 <Ionicons
-                  name="document-text-outline"
+                  name="document-lock-outline"
                   size={22}
                   className="mr-2"
                 />
-                <Text className="font-interBold text-lg">Privacy</Text>
+                <Text className="font-interBold text-lg">Privacy Policy</Text>
               </View>
               <Ionicons name="arrow-forward-sharp" size={22} color={"gray"} />
             </Pressable>
@@ -52,7 +52,11 @@ export default function About() {
           <Link href={`/termsOfUse`} asChild>
             <Pressable className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded">
               <View className="flex-row items-center">
-                <Ionicons name="documents" size={22} className="mr-2" />
+                <Ionicons
+                  name="document-text-outline"
+                  size={22}
+                  className="mr-2"
+                />
                 <Text className="font-interBold text-lg">Terms of Use</Text>
               </View>
               <Ionicons name="arrow-forward-sharp" size={22} color={"gray"} />

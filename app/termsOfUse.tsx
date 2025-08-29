@@ -14,7 +14,7 @@ export default function TermsOfUse() {
           </View>
           <ScreenTitle title="Terms of Use" />
 
-          <Text className="text-sm text-gray-700 mt-4 mb-6 font-inter">
+          <Text className="text-sm text-gray-700 mt-4 mb-4 font-inter">
             Last updated: August 29, 2025
           </Text>
 
@@ -100,6 +100,10 @@ export default function TermsOfUse() {
                 us at: vocabsaga.space@gmail.com or sumsourabh14@gmail.com
               </Text>
             </View>
+
+            <Text className="text-gray-500 text-center font-inter text-sm mb-4">
+              Vocabsaga &copy; {new Date().getFullYear()}
+            </Text>
           </View>
         </View>
       </ScrollView>
