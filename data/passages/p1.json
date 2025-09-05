@@ -1056,7 +1056,7 @@
     "difficulty_level": "easy",
     "passages": {
       "15": "Her clever solution fixed the machine in minutes, surprising everyone.",
-      "30": "Faced with a broken engine, she devised a clever fix, using spare parts, her clever ingenuity saving the day as the machine roared back to life."
+      "30": "Faced with a broken engine, she devised a fix, using spare parts, her clever ingenuity saving the day as the machine roared back to life."
     }
   },
   {
@@ -1096,17 +1096,7 @@
     "difficulty_level": "hard",
     "passages": {
       "15": "The book’s arcane knowledge fascinated only a few dedicated scholars.",
-      "30": "Hidden in the library, the tome held arcane secrets, its arcane symbols deciphered only by a select few, who pored over its pages under flickering candlelight."
-    }
-  },
-  {
-    "id": "118",
-    "word": "spry",
-    "word_meaning": "active and lively, especially in an older person",
-    "difficulty_level": "medium",
-    "passages": {
-      "15": "The spry elder amazed everyone, jogging daily with youthful vigor.",
-      "30": "At the town race, the spry grandfather outran younger competitors, his spry steps defying age, as he crossed the finish line with a grin and a cheer."
+      "30": "Hidden in the library, the tome held secrets, its arcane symbols deciphered only by a select few, who pored over its pages under flickering candlelight."
     }
   },
   {
@@ -1186,7 +1176,7 @@
     "difficulty_level": "hard",
     "passages": {
       "15": "Her vehement protest against the decision shook the quiet meeting.",
-      "30": "With a vehement cry, she opposed the unfair policy, her vehement passion igniting the crowd, who rose in support, their cheers echoing through the town hall."
+      "30": "With a vehement cry, she opposed the unfair policy, her passion igniting the crowd, who rose in support, their cheers echoing through the town hall."
     }
   },
   {
@@ -1206,7 +1196,7 @@
     "difficulty_level": "easy",
     "passages": {
       "15": "Her cheerful greeting brightened the mood of the rainy morning.",
-      "30": "Entering the café with a cheerful wave, she spread cheerful warmth, her bright smile lifting spirits as customers forgot the dreary rain pattering against the windows."
+      "30": "Entering the café with a cheerful wave, she spread warmth, her bright smile lifting spirits as customers forgot the dreary rain pattering against the windows."
     }
   },
   {
@@ -1216,7 +1206,7 @@
     "difficulty_level": "medium",
     "passages": {
       "15": "She gazed with wistful eyes at her childhood home.",
-      "30": "Standing before her old house, her wistful gaze lingered on faded shutters, memories of wistful summers flooding back, now distant in the quiet autumn light."
+      "30": "Standing before her old house, her wistful gaze lingered on faded shutters, memories of summers flooding back, now distant in the quiet autumn light."
     }
   },
   {
@@ -1226,7 +1216,7 @@
     "difficulty_level": "medium",
     "passages": {
       "15": "His debonair charm captivated everyone at the elegant gala.",
-      "30": "Strolling through the gala, his debonair style, from tailored suit to easy smile, and debonair wit won over guests, who admired his effortless grace and charm."
+      "30": "Strolling through the gala, his debonair style, from tailored suit to easy smile, and wit won over guests, who admired his effortless grace and charm."
     }
   },
   {
@@ -1285,8 +1275,8 @@
     "word_meaning": "overflowing with enthusiasm or excitement",
     "difficulty_level": "medium",
     "passages": {
-      "15": "Her ebullient cheers, ebullient spirit, rallied the tired runners.",
-      "30": "With ebullient shouts, her ebullient enthusiasm lifted the marathon runners, their weary steps quickening as she waved banners and cheered from the vibrant sidelines."
+      "15": "Her ebullient cheers spirit, rallied the tired runners.",
+      "30": "With ebullient shouts, her enthusiasm lifted the marathon runners, their weary steps quickening as she waved banners and cheered from the vibrant sidelines."
     }
   },
   {
@@ -1295,7 +1285,7 @@
     "word_meaning": "having a sharp, strong taste or smell",
     "difficulty_level": "medium",
     "passages": {
-      "15": "The pungent, pungent aroma of spices filled the bustling kitchen.",
+      "15": "The pungent aroma of spices filled the bustling kitchen.",
       "30": "In the market, pungent spices released a pungent scent, drawing cooks to stalls where vibrant powders promised bold flavors for dishes simmering in nearby homes."
     }
   },
@@ -1305,7 +1295,7 @@
     "word_meaning": "determined and unwavering in purpose",
     "difficulty_level": "medium",
     "passages": {
-      "15": "With resolute, resolute focus, she trained daily for the competition.",
+      "15": "With resolute focus, she trained daily for the competition.",
       "30": "Her resolute determination shone as she trained, resolute in her goal, ignoring blisters and fatigue to perfect each move for the championship under the stadium lights."
     }
   },
@@ -1365,7 +1355,7 @@
     "word_meaning": "treating serious issues with deliberately inappropriate humor",
     "difficulty_level": "hard",
     "passages": {
-      "15": "His facetious, facetious joke about the deadline annoyed the boss.",
+      "15": "His facetious joke about the deadline annoyed the boss.",
       "30": "So, Mike drops this facetious quip about missing the deadline, and his facetious grin just makes the boss fume, while we’re all trying not to laugh."
     }
   },
@@ -1375,7 +1365,7 @@
     "word_meaning": "showing bold or daring confidence, often recklessly",
     "difficulty_level": "hard",
     "passages": {
-      "15": "Her audacious, audacious plan to crash the gala shocked us.",
+      "15": "Her audacious plan to crash the gala shocked us.",
       "30": "Okay, Lisa’s audacious idea to sneak into the fancy gala was wild; her audacious confidence had us all giggling nervously as she strutted in like she owned the place."
     }
   },
@@ -1385,7 +1375,7 @@
     "word_meaning": "using or expressing dry, mocking humor",
     "difficulty_level": "medium",
     "passages": {
-      "15": "His wry, wry comment about my cooking made everyone chuckle.",
+      "15": "His wry comment about my cooking made everyone chuckle.",
       "30": "So, I burn the pie, and he gives this wry smirk, tossing a wry jab about my cooking skills, which had the whole table laughing despite the smoky kitchen."
     }
   }
