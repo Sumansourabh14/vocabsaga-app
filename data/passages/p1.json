@@ -1378,5 +1378,15 @@
       "15": "His wry comment about my cooking made everyone chuckle.",
       "30": "So, I burn the pie, and he gives this wry smirk, tossing a wry jab about my cooking skills, which had the whole table laughing despite the smoky kitchen."
     }
+  },
+  {
+    "id": "150",
+    "word": "merry",
+    "word_meaning": "cheerful and lively, often associated with festivity",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The merry carolers sang joyfully, filling the snowy street with warmth.",
+      "30": "On the frosty evening, merry carolers roamed the village, their lively songs and jingling bells spreading cheer, as neighbors opened windows to join the festive melody."
+    }
   }
 ]
