@@ -73,7 +73,7 @@ export default function Bookmarks() {
               <Ionicons name="bookmark" size={24} color="black" />
             </Pressable>
             <Text className="text-xl font-interBold">{item.word}</Text>
-            <Text className="text-sm text-neutral-500 mt-2">
+            <Text className="text-sm text-neutral-500 mt-2 font-inter">
               {dayjs(item.createdAt).fromNow()}
             </Text>
           </Pressable>
