@@ -26,11 +26,6 @@ export default function About() {
             title="Instagram"
           />
           <SocialNavLink
-            link="https://x.com/vocabsaga"
-            icon="logo-twitter"
-            title="Twitter/X"
-          />
-          <SocialNavLink
             link="https://vocabsaga.space"
             icon="laptop-outline"
             title="Website"
