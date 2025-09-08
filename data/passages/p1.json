@@ -90,16 +90,6 @@
     }
   },
   {
-    "id": "11",
-    "word": "gleam",
-    "word_meaning": "a small, bright light or shine",
-    "difficulty_level": "easy",
-    "passages": {
-      "15": "A faint gleam from the lantern guided them through the foggy night.",
-      "30": "A faint gleam from the lantern pierced the thick fog, revealing wet cobblestones and the shadow of a man waiting silently at the corner of the empty street."
-    }
-  },
-  {
     "id": "12",
     "word": "reluctant",
     "word_meaning": "unwilling or hesitant",
@@ -1817,6 +1807,206 @@
     "passages": {
       "15": "The agathokakological character intrigued readers with moral ambiguity.",
       "30": "In the tale, the agathokakological hero balanced virtue and vice, his actions a tapestry of light and shadow, captivating audiences under the spell of flickering firelight."
+    }
+  },
+  {
+    "id": "198",
+    "word": "bustle",
+    "word_meaning": "move in an energetic or noisy manner",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The market bustled with shoppers haggling over colorful wares.",
+      "30": "In the vibrant market, shoppers bustled through crowded stalls, their voices blending with clinking coins and the scent of spices, creating a lively hum under the morning sun."
+    }
+  },
+  {
+    "id": "199",
+    "word": "glimmer",
+    "word_meaning": "shine faintly with a wavering light",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Stars glimmered faintly above the quiet, darkened valley.",
+      "30": "Above the hushed valley, stars glimmered softly, their wavering light casting a gentle glow, guiding wanderers through the cool night as crickets sang in the distance."
+    }
+  },
+  {
+    "id": "200",
+    "word": "hasten",
+    "word_meaning": "move or act quickly; hurry",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "She hastened to the station, clutching her ticket tightly.",
+      "30": "Clutching her ticket, she hastened through the crowded streets, dodging carts and weaving past vendors, her heart racing to catch the last train under the fading sunset."
+    }
+  },
+  {
+    "id": "201",
+    "word": "murmur",
+    "word_meaning": "a soft, low, or indistinct sound",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The stream’s gentle murmur soothed the weary travelers.",
+      "30": "By the forest, the stream’s soft murmur lulled travelers, its quiet ripples blending with rustling leaves, creating a peaceful haven under the canopy of twinkling stars."
+    }
+  },
+  {
+    "id": "202",
+    "word": "saunter",
+    "word_meaning": "walk in a slow, relaxed manner",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "He sauntered through the park, enjoying the warm breeze.",
+      "30": "He sauntered lazily through the park, hands in pockets, as the warm breeze carried scents of blooming flowers, his carefree steps matching the rhythm of a sunny afternoon."
+    }
+  },
+  {
+    "id": "203",
+    "word": "kindle",
+    "word_meaning": "start a fire; ignite or inspire",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Her words kindled hope in the discouraged team.",
+      "30": "Her passionate speech kindled a spark in the team, their doubts fading as her words, warm as a hearth, inspired them to rise and face the challenge anew."
+    }
+  },
+  {
+    "id": "204",
+    "word": "gaze",
+    "word_meaning": "look steadily and intently, especially in admiration",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "She gazed at the sunset, lost in its fiery beauty.",
+      "30": "She gazed at the horizon, where the sunset’s fiery hues painted the sky, her eyes tracing each vibrant streak as the evening breeze whispered through the quiet hills."
+    }
+  },
+  {
+    "id": "205",
+    "word": "ramble",
+    "word_meaning": "walk for pleasure without a definite route",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "They rambled through the meadows, carefree under the sun.",
+      "30": "They rambled through golden meadows, their laughter mingling with birdsong, as wildflowers brushed their legs and the warm sun guided their aimless, joyful path."
+    }
+  },
+  {
+    "id": "206",
+    "word": "flicker",
+    "word_meaning": "shine unsteadily or waver; a brief movement",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The candle’s flicker cast dancing shadows on the walls.",
+      "30": "In the cozy cabin, the candle’s flicker sent shadows dancing across wooden walls, their wavering glow creating a warm, fleeting magic as the storm howled outside."
+    }
+  },
+  {
+    "id": "207",
+    "word": "linger",
+    "word_meaning": "stay longer than necessary, often due to reluctance",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "She lingered by the lake, reluctant to leave its calm.",
+      "30": "By the serene lake, she lingered, her heart hesitant to depart, as the water’s gentle lapping and the scent of pine held her in a tranquil, timeless embrace."
+    }
+  },
+  {
+    "id": "208",
+    "word": "drift",
+    "word_meaning": "be carried slowly by a current or breeze",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Leaves drifted lazily down the stream, catching the sunlight.",
+      "30": "Golden leaves drifted along the quiet stream, their slow dance sparkling in the sunlight, as the gentle current carried them past mossy rocks under a serene autumn sky."
+    }
+  },
+  {
+    "id": "209",
+    "word": "sparkle",
+    "word_meaning": "shine brightly with flashes of light",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Dewdrops sparkled on the grass, glowing in the morning light.",
+      "30": "At dawn, dewdrops sparkled across the meadow, their tiny prisms catching the sun’s rays, casting fleeting rainbows that enchanted early risers strolling through the cool grass."
+    }
+  },
+  {
+    "id": "210",
+    "word": "sway",
+    "word_meaning": "move or swing back and forth gently",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The trees swayed softly in the warm summer breeze.",
+      "30": "In the orchard, trees swayed gently, their branches rustling in the warm breeze, casting dappled shadows on the ground as the scent of ripe apples filled the air."
+    }
+  },
+  {
+    "id": "211",
+    "word": "whisper",
+    "word_meaning": "speak or say something very softly",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "She whispered secrets to her friend under the moonlight.",
+      "30": "Under the glowing moon, she whispered secrets to her friend, their soft voices blending with the night’s quiet, as stars twinkled above the hushed, silver-lit garden."
+    }
+  },
+  {
+    "id": "212",
+    "word": "stroll",
+    "word_meaning": "walk in a leisurely or relaxed way",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "They strolled along the beach, enjoying the crashing waves.",
+      "30": "They strolled hand-in-hand along the sandy beach, waves crashing rhythmically, as the salty breeze and seagull cries wrapped them in a carefree, sunlit moment."
+    }
+  },
+  {
+    "id": "213",
+    "word": "gleam",
+    "word_meaning": "shine brightly, especially with reflected light",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The polished wood gleamed under the soft lantern light.",
+      "30": "In the cozy cabin, polished wood gleamed warmly under lantern light, its rich glow reflecting off walls, creating a snug haven as rain tapped the windows outside."
+    }
+  },
+  {
+    "id": "214",
+    "word": "dash",
+    "word_meaning": "run or move quickly and suddenly",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "He dashed across the field to catch the runaway kite.",
+      "30": "With a shout, he dashed across the windy field, chasing the runaway kite, its bright tail dancing just out of reach as laughter echoed under the wide sky."
+    }
+  },
+  {
+    "id": "215",
+    "word": "soothe",
+    "word_meaning": "gently calm or relieve",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Her soft lullaby soothed the restless child to sleep.",
+      "30": "Singing a soft lullaby, she soothed the fussy child, her gentle voice blending with the night’s calm, as moonlight streamed through the window, lulling them to sleep."
+    }
+  },
+  {
+    "id": "216",
+    "word": "twinkle",
+    "word_meaning": "shine with a flickering or sparkling light",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Fireflies twinkled in the meadow, delighting the evening walkers.",
+      "30": "In the dusky meadow, fireflies twinkled like tiny stars, their flickering glow enchanting walkers, who paused to watch the delicate dance amid the sweet scent of clover."
+    }
+  },
+  {
+    "id": "217",
+    "word": "wander",
+    "word_meaning": "move or travel aimlessly without a fixed destination",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "He wandered through the forest, lost in its quiet beauty.",
+      "30": "He wandered through the dense forest, moss cushioning his steps, as birdsong and the scent of pine guided his aimless path under the cool, dappled canopy."
     }
   }
 ]
