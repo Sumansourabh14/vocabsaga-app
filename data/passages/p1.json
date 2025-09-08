@@ -2000,13 +2000,73 @@
     }
   },
   {
-    "id": "217",
-    "word": "wander",
-    "word_meaning": "move or travel aimlessly without a fixed destination",
+    "id": "228",
+    "word": "tumble",
+    "word_meaning": "fall suddenly or clumsily; roll over",
     "difficulty_level": "easy",
     "passages": {
-      "15": "He wandered through the forest, lost in its quiet beauty.",
-      "30": "He wandered through the dense forest, moss cushioning his steps, as birdsong and the scent of pine guided his aimless path under the cool, dappled canopy."
+      "15": "The puppy tumbled playfully in the soft grass, chasing its tail.",
+      "30": "In the sunny meadow, the puppy tumbled joyfully, rolling in soft grass, its clumsy bounds sparking giggles as it chased its tail under the warm, golden afternoon light."
+    }
+  },
+  {
+    "id": "229",
+    "word": "flutter",
+    "word_meaning": "move or flap quickly, like wings",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Butterflies fluttered around the colorful flowers in the garden.",
+      "30": "In the bright garden, butterflies fluttered lightly, their delicate wings brushing vibrant petals, creating a dance of colors as the sweet scent of flowers filled the warm air."
+    }
+  },
+  {
+    "id": "232",
+    "word": "blaze",
+    "word_meaning": "burn or shine brightly with strong light or heat",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The fire blazed warmly, lighting the cozy campsite.",
+      "30": "At the campsite, the fire blazed brightly, its warm light dancing on faces, casting a cozy glow as friends shared stories amid the crackle of burning logs."
+    }
+  },
+  {
+    "id": "233",
+    "word": "hop",
+    "word_meaning": "jump lightly on one foot or with small bounds",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "The rabbit hopped across the field, nibbling clover.",
+      "30": "In the quiet field, the rabbit hopped lightly, pausing to nibble sweet clover, its small bounds stirring grass as sunlight warmed the peaceful meadow in early spring."
+    }
+  },
+  {
+    "id": "235",
+    "word": "giggle",
+    "word_meaning": "laugh lightly in a silly or nervous way",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Children giggled at the clown’s funny tricks in the park.",
+      "30": "At the park, children giggled loudly, watching the clown’s silly tricks, their joyful laughter echoing as balloons bobbed and the bright sun lit up the festive scene."
+    }
+  },
+  {
+    "id": "236",
+    "word": "swirl",
+    "word_meaning": "move in a twisting or spiraling pattern",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "Leaves swirled in the autumn wind, dancing across the path.",
+      "30": "In the crisp autumn air, golden leaves swirled wildly, twirling down the forest path, their rustling dance mixing with the breeze as sunlight filtered through bare branches."
+    }
+  },
+  {
+    "id": "237",
+    "word": "snuggle",
+    "word_meaning": "settle or move closer for comfort or warmth",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "She snuggled into the blanket, warmed by the fire.",
+      "30": "By the crackling fire, she snuggled deeper into her soft blanket, its warmth wrapping her in comfort as the scent of burning wood filled the cozy winter cabin."
     }
   }
 ]
