@@ -1220,16 +1220,6 @@
     }
   },
   {
-    "id": "131",
-    "word": "radiant",
-    "word_meaning": "emitting light or heat; shining brightly",
-    "difficulty_level": "medium",
-    "passages": {
-      "15": "Her radiant smile brightened the gloomy room, lifting everyone’s mood.",
-      "30": "Amid the festival, her radiant grin outshone the lanterns, drawing friends to join her dance as music filled the night with joy and vibrant energy."
-    }
-  },
-  {
     "id": "132",
     "word": "stoic",
     "word_meaning": "enduring pain or hardship without showing emotion",
@@ -1387,6 +1377,246 @@
     "passages": {
       "15": "The merry carolers sang joyfully, filling the snowy street with warmth.",
       "30": "On the frosty evening, merry carolers roamed the village, their lively songs and jingling bells spreading cheer, as neighbors opened windows to join the festive melody."
+    }
+  },
+  {
+    "id": "154",
+    "word": "perspicuous",
+    "word_meaning": "clearly expressed, easy to understand despite complexity",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Her perspicuous explanation unraveled the theorem, astonishing the perplexed mathematicians.",
+      "30": "In the lecture hall, her perspicuous breakdown of the arcane theorem cut through confusion, her precise words illuminating complex ideas, leaving scholars in awe under the dim chandelier."
+    }
+  },
+  {
+    "id": "155",
+    "word": "tenebrous",
+    "word_meaning": "dark, shadowy, obscure; difficult to perceive",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The tenebrous cavern hid secrets no explorer dared to uncover.",
+      "30": "Deep within the tenebrous cavern, shadows cloaked ancient carvings, their eerie forms barely visible, whispering of forgotten rituals to the lone explorer braving the oppressive darkness."
+    }
+  },
+  {
+    "id": "156",
+    "word": "obfuscatory",
+    "word_meaning": "deliberately confusing or unclear; obscuring meaning",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His obfuscatory speech left the council baffled, unable to grasp his intentions.",
+      "30": "In the dimly lit chamber, his obfuscatory rhetoric wove a tangled web of vague phrases, leaving council members frustrated, their questions unanswered amidst the flickering candlelight."
+    }
+  },
+  {
+    "id": "157",
+    "word": "susurrus",
+    "word_meaning": "a soft, whispering or rustling sound; a murmur",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "A susurrus of leaves stirred the silence of the moonlit forest.",
+      "30": "Through the moonlit forest, a susurrus of leaves whispered secrets, their gentle rustling blending with distant owls, creating an eerie chorus that chilled the lone wanderer’s heart."
+    }
+  },
+  {
+    "id": "158",
+    "word": "caliginous",
+    "word_meaning": "dark, misty, and gloomy; obscure",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The caliginous swamp swallowed light, unnerving even the boldest travelers.",
+      "30": "In the caliginous swamp, dense mist curled around gnarled trees, obscuring paths as eerie silence and faint croaks unsettled travelers braving the oppressive, shadow-laden air."
+    }
+  },
+  {
+    "id": "159",
+    "word": "syllogistic",
+    "word_meaning": "relating to or consisting of a logical argument in two premises and a conclusion",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His syllogistic reasoning dismantled the opponent’s argument in the debate.",
+      "30": "In the quiet hall, his syllogistic argument unfolded methodically, each premise building to a conclusion that silenced opponents, their rebuttals crumbling under his logical precision."
+    }
+  },
+  {
+    "id": "160",
+    "word": "thaumaturgic",
+    "word_meaning": "having or displaying miraculous or magical powers",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The sage’s thaumaturgic aura captivated the village, sparking whispers of magic.",
+      "30": "Under starlight, the sage’s thaumaturgic presence enthralled the village, her gestures conjuring faint glimmers, as awestruck onlookers whispered of miracles woven in the night air."
+    }
+  },
+  {
+    "id": "161",
+    "word": "crepuscular",
+    "word_meaning": "resembling or relating to twilight; active at dusk or dawn",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Crepuscular shadows cloaked the meadow, where bats began their silent dance.",
+      "30": "As crepuscular light bathed the meadow, bats emerged, their wings slicing through twilight’s haze, weaving silent patterns that mesmerized the lone watcher in the fading glow."
+    }
+  },
+  {
+    "id": "162",
+    "word": "limpid",
+    "word_meaning": "clear and transparent, especially in a pure or serene way",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Her limpid prose clarified the complex topic for all readers.",
+      "30": "Her limpid writing illuminated the manuscript, each sentence flowing with serene clarity, transforming arcane theories into accessible truths under the soft glow of her desk lamp."
+    }
+  },
+  {
+    "id": "163",
+    "word": "fuliginous",
+    "word_meaning": "sooty, smoky, or dusky; obscured by darkness",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The fuliginous haze from the fire obscured the ancient ruins.",
+      "30": "A fuliginous veil of smoke drifted over the ruins, cloaking stone carvings in shadow, as the acrid scent of charred wood haunted explorers in the dim twilight."
+    }
+  },
+  {
+    "id": "164",
+    "word": "prolix",
+    "word_meaning": "tediously prolonged or wordy; overly verbose",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His prolix lecture exhausted the audience, who craved brevity.",
+      "30": "The professor’s prolix discourse rambled endlessly, piling dense jargon upon tangents, leaving students weary, their notebooks filled with words but starved for concise meaning."
+    }
+  },
+  {
+    "id": "165",
+    "word": "epiphanic",
+    "word_meaning": "relating to a sudden realization or insight",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "An epiphanic moment struck her, revealing the solution at midnight.",
+      "30": "Under the starry sky, an epiphanic spark ignited her mind, unveiling the puzzle’s answer, as the quiet night amplified her sudden clarity amidst the whispering pines."
+    }
+  },
+  {
+    "id": "166",
+    "word": "tatterdemalion",
+    "word_meaning": "ragged or disreputable in appearance; shabby",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The tatterdemalion wanderer shuffled through the village, unnoticed by most.",
+      "30": "In tatterdemalion rags, the wanderer trudged through the village, his patched cloak flapping in the wind, ignored by all but the children who saw stories in his weathered face."
+    }
+  },
+  {
+    "id": "167",
+    "word": "phlegmatic",
+    "word_meaning": "having an unemotional or stolidly calm disposition",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His phlegmatic response to the crisis steadied the frantic crowd.",
+      "30": "Amid the chaos, his phlegmatic calm anchored the group, his unemotional tone and steady gaze guiding them through the storm with quiet, unshakable resolve."
+    }
+  },
+  {
+    "id": "168",
+    "word": "lachrymose",
+    "word_meaning": "tearful or mournful; inclined to weep",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Her lachrymose demeanor at the farewell moved the stoic crowd.",
+      "30": "At the station, her lachrymose farewell, eyes brimming with tears, softened the crowd, as the train’s whistle echoed, mingling with her sobs in the misty dawn air."
+    }
+  },
+  {
+    "id": "169",
+    "word": "sesquipedalian",
+    "word_meaning": "characterized by long words; polysyllabic",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His sesquipedalian speech bewildered the audience, craving simpler terms.",
+      "30": "In the lecture, his sesquipedalian verbosity, packed with multisyllabic jargon, left listeners dazed, scribbling incomprehensible terms as the chandelier’s light flickered over their puzzled faces."
+    }
+  },
+  {
+    "id": "170",
+    "word": "coruscating",
+    "word_meaning": "flashing or sparkling brilliantly; highly incisive or witty",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Her coruscating wit lit up the dull debate, startling everyone.",
+      "30": "Amid the tedious debate, her coruscating quips sparkled, slicing through arguments with brilliant humor, as the room erupted in laughter under the glow of ornate lamps."
+    }
+  },
+  {
+    "id": "171",
+    "word": "evanescent",
+    "word_meaning": "quickly fading or disappearing; fleeting",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The evanescent mist vanished, revealing the valley’s hidden beauty.",
+      "30": "As dawn broke, the evanescent mist dissolved swiftly, unveiling a valley where dew glistened on wildflowers, their fleeting shimmer captivating hikers in the quiet morning light."
+    }
+  },
+  {
+    "id": "172",
+    "word": "oneiric",
+    "word_meaning": "relating to dreams or dreamlike states",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The painting’s oneiric imagery blurred reality, entrancing viewers.",
+      "30": "In the gallery, the oneiric canvas wove dreamlike scenes, its surreal colors and shapes pulling viewers into a hazy realm where reality and fantasy merged under soft lights."
+    }
+  },
+  {
+    "id": "173",
+    "word": "sempiternal",
+    "word_meaning": "eternal and unchanging; everlasting",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The sempiternal stars shone steadily above the restless world.",
+      "30": "High above the shifting desert, sempiternal stars gleamed unchanging, their ancient light a quiet comfort to nomads who navigated by their glow through endless, windswept nights."
+    }
+  },
+  {
+    "id": "174",
+    "word": "parsimonious",
+    "word_meaning": "excessively frugal or stingy; sparing in expenditure",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His parsimonious habits frustrated the team, who needed resources.",
+      "30": "His parsimonious refusal to fund supplies baffled the crew, who watched him hoard coins while the expedition faltered, their tools worn and spirits dimmed in the harsh wilderness."
+    }
+  },
+  {
+    "id": "175",
+    "word": "numinous",
+    "word_meaning": "having a mysterious, spiritual, or supernatural quality",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The numinous aura of the shrine silenced the weary pilgrims.",
+      "30": "In the ancient shrine, a numinous glow seemed to pulse from the stones, hushing pilgrims who felt an otherworldly presence linger in the cool, sacred air."
+    }
+  },
+  {
+    "id": "176",
+    "word": "antipodean",
+    "word_meaning": "relating to the opposite side of the world; diametrically opposed",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Their antipodean perspectives clashed fiercely during the global summit.",
+      "30": "At the summit, their antipodean views sparked heated debate, each delegate’s stance so opposed that the room buzzed with tension under the glow of international flags."
+    }
+  },
+  {
+    "id": "177",
+    "word": "chthonic",
+    "word_meaning": "relating to or inhabiting the underworld; subterranean",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The chthonic myths whispered of spirits beneath the earth’s surface.",
+      "30": "In the village, chthonic tales of underworld spirits haunted listeners, their eerie whispers of subterranean realms echoing in the firelight as shadows danced on cave walls."
     }
   }
 ]
