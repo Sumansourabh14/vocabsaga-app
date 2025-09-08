@@ -1618,5 +1618,205 @@
       "15": "The chthonic myths whispered of spirits beneath the earth’s surface.",
       "30": "In the village, chthonic tales of underworld spirits haunted listeners, their eerie whispers of subterranean realms echoing in the firelight as shadows danced on cave walls."
     }
+  },
+  {
+    "id": "178",
+    "word": "obstreperous",
+    "word_meaning": "noisy and difficult to control; stubbornly resistant",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The obstreperous crowd’s shouts disrupted the solemn ceremony.",
+      "30": "During the quiet ritual, the obstreperous mob’s raucous chants echoed, their defiant clamor drowning out prayers, as torchlight flickered over their unruly faces in the twilight."
+    }
+  },
+  {
+    "id": "179",
+    "word": "diaphanous",
+    "word_meaning": "light, delicate, and translucent; almost transparent",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Her diaphanous veil floated ethereally in the evening breeze.",
+      "30": "At the gala, her diaphanous gown shimmered, its translucent fabric catching moonlight, drifting like mist as she glided across the marble floor, captivating all onlookers."
+    }
+  },
+  {
+    "id": "180",
+    "word": "propinquity",
+    "word_meaning": "proximity or nearness; kinship or similarity",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Their propinquity in the village fostered an unexpected alliance.",
+      "30": "Living in propinquity, the neighbors formed a bond, their shared evenings by the hearth weaving a kinship that turned strangers into allies under the starry rural sky."
+    }
+  },
+  {
+    "id": "181",
+    "word": "effulgent",
+    "word_meaning": "shining brilliantly; radiant",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The effulgent sunrise painted the horizon with golden brilliance.",
+      "30": "As the effulgent dawn broke, golden rays bathed the cliffs, their radiant glow reflecting off the sea, awakening the sleepy village with a burst of dazzling light."
+    }
+  },
+  {
+    "id": "182",
+    "word": "pervicacious",
+    "word_meaning": "extremely willful or stubborn; obstinate",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His pervicacious refusal baffled the negotiators seeking compromise.",
+      "30": "In the tense council, his pervicacious stance against change, unyielding as stone, frustrated mediators, who watched him stand firm amidst the flickering lanterns of the chamber."
+    }
+  },
+  {
+    "id": "183",
+    "word": "plangent",
+    "word_meaning": "loud and resonant, with a mournful or plaintive quality",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The plangent toll of the bell mourned the village’s loss.",
+      "30": "Echoing across the valley, the plangent bell’s mournful chime rang out, its resonant sorrow piercing the fog, as villagers gathered silently to honor their fallen kin."
+    }
+  },
+  {
+    "id": "184",
+    "word": "impecunious",
+    "word_meaning": "having little or no money; penniless",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The impecunious artist painted masterpieces despite his poverty.",
+      "30": "Though impecunious, the artist crafted stunning works in his cramped attic, using scavenged paints, his genius shining through tattered clothes under the dim glow of a single candle."
+    }
+  },
+  {
+    "id": "185",
+    "word": "lambent",
+    "word_meaning": "softly glowing or flickering; gently radiant",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Lambent flames danced softly, casting a glow over the campsite.",
+      "30": "By the quiet river, lambent flames flickered gently, their soft glow warming the campsite, where weary travelers shared tales under the delicate light of a starry night."
+    }
+  },
+  {
+    "id": "186",
+    "word": "rebarbative",
+    "word_meaning": "repellent or irritating; unattractive",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His rebarbative tone alienated even his closest allies.",
+      "30": "With a rebarbative sneer, he dismissed their ideas, his grating voice and harsh words echoing in the hall, driving away allies under the cold glare of chandeliers."
+    }
+  },
+  {
+    "id": "187",
+    "word": "tintinnabulation",
+    "word_meaning": "the ringing or sounding of bells",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The tintinnabulation of church bells echoed through the misty valley.",
+      "30": "At dusk, the tintinnabulation of ancient bells rang out, their clear chimes cutting through mist, drawing villagers to the old church in the quiet, fog-shrouded valley."
+    }
+  },
+  {
+    "id": "188",
+    "word": "solivagant",
+    "word_meaning": "rambling alone : marked by solitary wandering",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The solivagant traveler roamed forgotten paths, seeking solitude in the wilderness.",
+      "30": "As a solivagant soul, he wandered misty trails alone, the crunch of leaves underfoot his only companion, finding peace in the solitary whispers of ancient forests at dusk."
+    }
+  },
+  {
+    "id": "189",
+    "word": "filipendulous",
+    "word_meaning": "suspended by or strung upon a thread",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The filipendulous ornament swayed gently from the fragile silk thread.",
+      "30": "In the quiet atelier, the filipendulous crystal dangled from a slender thread, catching sunlight and casting rainbows, as the artisan admired its delicate balance in the breeze."
+    }
+  },
+  {
+    "id": "190",
+    "word": "deipnosophist",
+    "word_meaning": "a person skilled in table talk",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The deipnosophist charmed guests with witty anecdotes over dinner.",
+      "30": "At the lavish banquet, the deipnosophist wove tales seamlessly, his eloquent banter sparking laughter, as candlelight flickered over faces enthralled by his conversational artistry."
+    }
+  },
+  {
+    "id": "191",
+    "word": "scripturient",
+    "word_meaning": "having a strong urge to write",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The scripturient author filled notebooks with endless ideas at midnight.",
+      "30": "Driven by scripturient passion, she scribbled furiously in her attic, ink staining her fingers, as the moonlit window framed her relentless pursuit of capturing fleeting thoughts."
+    }
+  },
+  {
+    "id": "192",
+    "word": "penultimatum",
+    "word_meaning": "a demand or proposal approaching an ultimatum",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His penultimatum warned of consequences if negotiations failed soon.",
+      "30": "In the tense boardroom, his penultimatum hung heavy, a near-final demand echoing amid whispers, as clocks ticked and executives weighed the looming threat under dim lights."
+    }
+  },
+  {
+    "id": "193",
+    "word": "matutinal",
+    "word_meaning": "of, relating to, or occurring in the morning",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "Her matutinal routine included yoga as dawn broke softly.",
+      "30": "In the matutinal hush, she practiced yoga on the dew-kissed grass, the rising sun warming her face, infusing her day with serene energy amid chirping birds."
+    }
+  },
+  {
+    "id": "194",
+    "word": "make-bate",
+    "word_meaning": "one that excites contention and quarrels",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The make-bate stirred discord among the once-harmonious group.",
+      "30": "As a notorious make-bate, he sowed seeds of argument at gatherings, his sly remarks igniting feuds, while shadows lengthened and tempers flared in the crowded hall."
+    }
+  },
+  {
+    "id": "195",
+    "word": "empleomania",
+    "word_meaning": "a mania for holding public office",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "His empleomania drove him to campaign relentlessly for every position.",
+      "30": "Fueled by empleomania, he pursued offices with unyielding zeal, his speeches echoing in town squares, as crowds gathered under banners, drawn to his ambitious fervor."
+    }
+  },
+  {
+    "id": "196",
+    "word": "noctivagant",
+    "word_meaning": "going about in the night : night-wandering",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The noctivagant figure slipped through shadows, unseen by all.",
+      "30": "As a noctivagant wanderer, he roamed moonlit streets, the city's hush broken only by distant owls, his footsteps echoing mysteries in the velvet embrace of night."
+    }
+  },
+  {
+    "id": "197",
+    "word": "agathokakological",
+    "word_meaning": "composed of both good and evil",
+    "difficulty_level": "hard",
+    "passages": {
+      "15": "The agathokakological character intrigued readers with moral ambiguity.",
+      "30": "In the tale, the agathokakological hero balanced virtue and vice, his actions a tapestry of light and shadow, captivating audiences under the spell of flickering firelight."
+    }
   }
 ]
