@@ -2068,5 +2068,295 @@
       "15": "She snuggled into the blanket, warmed by the fire.",
       "30": "By the crackling fire, she snuggled deeper into her soft blanket, its warmth wrapping her in comfort as the scent of burning wood filled the cozy winter cabin."
     }
+  },
+  {
+    "id": "238",
+    "word": "beckon",
+    "word_meaning": "make a gesture to encourage someone to come nearer",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The lighthouse beckoned sailors through the stormy night’s fog.",
+      "30": "Through the stormy fog, the lighthouse beckoned with its steady beam, guiding weary sailors past jagged rocks, as waves crashed and the salty air stung their faces."
+    }
+  },
+  {
+    "id": "239",
+    "word": "glisten",
+    "word_meaning": "shine with a sparkling or wet appearance",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Rain-soaked leaves glistened under the morning’s golden light.",
+      "30": "After the rain, leaves glistened in the dawn’s glow, their wet surfaces sparkling brightly, reflecting sunlight across the quiet forest as a soft breeze stirred the fresh air."
+    }
+  },
+  {
+    "id": "240",
+    "word": "roam",
+    "word_meaning": "move or travel freely without a fixed purpose",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "She roamed the hills, seeking peace in their quiet beauty.",
+      "30": "She roamed the rolling hills, her steps free and unhurried, finding solace in the scent of wildflowers and the soft rustle of grass under a vast, cloudless sky."
+    }
+  },
+  {
+    "id": "241",
+    "word": "rustle",
+    "word_meaning": "make a soft, muffled sound, like leaves or paper",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Leaves rustled softly as the wind swept through the forest.",
+      "30": "As evening fell, leaves rustled gently in the forest, stirred by a cool breeze, their muffled whispers blending with distant bird calls under the fading twilight glow."
+    }
+  },
+  {
+    "id": "242",
+    "word": "plunge",
+    "word_meaning": "jump or dive quickly, often into water",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "He plunged into the cool lake, escaping the summer heat.",
+      "30": "With a laugh, he plunged into the lake, its cool water refreshing against the summer heat, as ripples spread and dragonflies skimmed the surface under the bright sun."
+    }
+  },
+  {
+    "id": "243",
+    "word": "bask",
+    "word_meaning": "lie or sit enjoying warmth or pleasant surroundings",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "She basked in the sun, warmed by its golden rays.",
+      "30": "On the soft sand, she basked in the sun’s warm embrace, its golden rays soothing her as waves lapped nearby and seagulls soared in the clear coastal sky."
+    }
+  },
+  {
+    "id": "244",
+    "word": "tread",
+    "word_meaning": "walk in a specified way, often carefully",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "He tread carefully along the rocky mountain path.",
+      "30": "He tread cautiously on the rocky path, each step measured, as the mountain’s crisp air filled his lungs and distant peaks loomed under the morning’s pale, misty light."
+    }
+  },
+  {
+    "id": "245",
+    "word": "glee",
+    "word_meaning": "great delight or happiness, often lively",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Her glee at the surprise party lit up the room.",
+      "30": "Bursting with glee, she laughed at the surprise party, her joy infectious, filling the room with warmth as balloons floated and music pulsed under colorful lights."
+    }
+  },
+  {
+    "id": "246",
+    "word": "swoop",
+    "word_meaning": "move rapidly downward through the air",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The hawk swooped down, snatching its prey from the field.",
+      "30": "With a swift swoop, the hawk dove from the sky, talons seizing its prey from the field, wings slicing the air as farmers paused, awed by its grace."
+    }
+  },
+  {
+    "id": "247",
+    "word": "muse",
+    "word_meaning": "think deeply or reflect, often dreamily",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "She mused by the window, lost in quiet thoughts.",
+      "30": "By the rain-streaked window, she mused dreamily, her thoughts drifting through memories, as the soft patter of rain and distant thunder wove a tranquil spell around her."
+    }
+  },
+  {
+    "id": "248",
+    "word": "amble",
+    "word_meaning": "walk at a slow, leisurely pace",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Why not amble through the orchard, enjoying the sweet apple scent?",
+      "30": "Hey, let’s amble through the orchard, shall we? The air’s thick with the sweet scent of ripe apples, and the soft crunch of leaves underfoot makes every step feel like a quiet escape."
+    }
+  },
+  {
+    "id": "249",
+    "word": "shimmer",
+    "word_meaning": "shine with a soft, wavering light",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The lake shimmered under the stars, reflecting their quiet beauty.",
+      "30": "Look at that lake shimmering under the stars! Its surface mirrors every twinkling light, casting a gentle glow that dances with the night breeze, pulling me into its calm magic."
+    }
+  },
+  {
+    "id": "250",
+    "word": "trudge",
+    "word_meaning": "walk slowly and heavily, often with effort",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "He trudged through the snow, his boots sinking with each step.",
+      "30": "Man, trudging through this snow is tough! My boots sink deep, the icy wind bites my face, but the warm glow of the cabin ahead keeps me pushing forward."
+    }
+  },
+  {
+    "id": "251",
+    "word": "chatter",
+    "word_meaning": "talk rapidly or incessantly about trivial matters",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Friends chattered excitedly at the café, sharing lively stories.",
+      "30": "The café buzzed as we chattered away. Our stories spilled out, laughter mixing with the clink of cups, while the aroma of fresh coffee wrapped us in cozy warmth."
+    }
+  },
+  {
+    "id": "252",
+    "word": "glide",
+    "word_meaning": "move smoothly and effortlessly",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Swans glided gracefully across the still, glassy pond.",
+      "30": "Wow, those swans glide so smoothly! Their sleek forms cut through the pond’s glassy surface, leaving gentle ripples under the morning mist, as if dancing with the dawn."
+    }
+  },
+  {
+    "id": "253",
+    "word": "marvel",
+    "word_meaning": "be filled with wonder or astonishment",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "She marveled at the vibrant colors of the festival lanterns.",
+      "30": "I couldn’t help but marvel at the festival! Lanterns glowed in every color, their light swaying in the breeze, filling the night with wonder as music echoed around me."
+    }
+  },
+  {
+    "id": "254",
+    "word": "clatter",
+    "word_meaning": "make or cause a loud, rattling sound",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Pots clattered in the kitchen, signaling a busy meal prep.",
+      "30": "The kitchen was alive with clatter—pots banging, spoons rattling—while the chef hummed, aromas of herbs and spices swirling, promising a feast under the warm glow of lanterns."
+    }
+  },
+  {
+    "id": "255",
+    "word": "nestle",
+    "word_meaning": "settle comfortably or snugly in a place",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The cat nestled in the blanket, purring contentedly.",
+      "30": "Can you believe how cozy that cat looks? Nestled in a soft blanket, it purrs softly, its warmth blending with the crackling fire’s glow in the quiet winter room."
+    }
+  },
+  {
+    "id": "256",
+    "word": "scramble",
+    "word_meaning": "move or climb quickly but awkwardly",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Kids scrambled up the hill to reach the picnic spot.",
+      "30": "The kids scrambled up the steep hill, giggling as they tripped over roots, racing to the picnic spot where blankets and baskets awaited under the sunny, open sky."
+    }
+  },
+  {
+    "id": "257",
+    "word": "ponder",
+    "word_meaning": "think about something carefully, especially before deciding",
+    "difficulty_level": "easy",
+    "passages": {
+      "15": "He pondered his choices by the calm riverbank.",
+      "30": "Sitting by the river, I pondered my next step. The water’s steady flow and soft ripples cleared my mind, guiding my thoughts under the shade of ancient willows."
+    }
+  },
+  {
+    "id": "258",
+    "word": "meander",
+    "word_meaning": "follow a winding or indirect course; wander aimlessly",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The river meandered through the valley, reflecting the sky’s glow.",
+      "30": "Ever notice how the river meanders so lazily? It curves through the valley, its glassy surface mirroring the pink sky, while soft ripples hum against the grassy banks."
+    }
+  },
+  {
+    "id": "259",
+    "word": "radiate",
+    "word_meaning": "emit energy, light, or warmth; spread outward",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Her smile radiated joy, brightening the dim festival tent.",
+      "30": "Her smile radiated pure joy! It lit up the festival tent, chasing away the gloom, as music swirled and the scent of roasted nuts filled the lively air."
+    }
+  },
+  {
+    "id": "260",
+    "word": "scuttle",
+    "word_meaning": "run hurriedly with short, quick steps",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Crabs scuttled across the beach, dodging the incoming tide.",
+      "30": "Look at those crabs scuttle! They dart across the wet sand, dodging waves with quick steps, as the salty tide roars in, sparkling under the blazing coastal sun."
+    }
+  },
+  {
+    "id": "261",
+    "word": "mellow",
+    "word_meaning": "soft, rich, or gentle in tone or effect",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The sunset’s mellow hues calmed the restless seaside village.",
+      "30": "The sunset cast a mellow glow over the village. Its soft oranges and pinks soothed my heart, blending with the gentle lapping of waves against the quiet shore."
+    }
+  },
+  {
+    "id": "262",
+    "word": "prance",
+    "word_meaning": "move with high, spirited steps; walk proudly",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "The horse pranced proudly in the parade, delighting onlookers.",
+      "30": "Wow, that horse prances like a star! Its spirited steps dazzled the parade, hooves clopping rhythmically, as cheering crowds waved under the bright banners of the festival."
+    }
+  },
+  {
+    "id": "263",
+    "word": "cherish",
+    "word_meaning": "hold dear or value greatly",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "She cherished the old locket, a gift from her grandmother.",
+      "30": "I cherish this locket so much. It was Grandma’s, its worn gold warm in my hand, holding memories of her laughter and stories shared under the old oak tree."
+    }
+  },
+  {
+    "id": "264",
+    "word": "trickle",
+    "word_meaning": "flow in a small, gentle stream",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "A stream trickled softly, winding through the quiet meadow.",
+      "30": "Can you hear that stream trickle? It weaves gently through the meadow, its soft gurgle mingling with birdsong, sparkling in the sunlight as it winds past wildflowers."
+    }
+  },
+  {
+    "id": "265",
+    "word": "revel",
+    "word_meaning": "enjoy oneself in a lively and noisy way",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "They reveled at the festival, dancing under colorful lights.",
+      "30": "We reveled all night at the festival! Dancing wildly under vibrant lights, we laughed as drums pounded and the sweet scent of caramel apples filled the joyous air."
+    }
+  },
+  {
+    "id": "266",
+    "word": "flit",
+    "word_meaning": "move swiftly and lightly, like a bird",
+    "difficulty_level": "medium",
+    "passages": {
+      "15": "Hummingbirds flitted among the flowers, sipping nectar swiftly.",
+      "30": "Those hummingbirds flit so fast! They dart between bright flowers, wings buzzing softly, sipping nectar as sunlight glints off their iridescent feathers in the warm garden breeze."
+    }
   }
 ]
