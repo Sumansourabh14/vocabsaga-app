@@ -33,7 +33,7 @@ const WordDeepMeanings = ({
             <View>
               {meaning.definitions.map((def, i) => (
                 <View key={i} className="mb-2">
-                  <View>
+                  <View className="flex-row gap-1">
                     <Text className="font-interBold">{i + 1}.</Text>
                     <Text className="font-inter">{def.definition}</Text>
                   </View>
