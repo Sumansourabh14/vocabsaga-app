@@ -1,11 +1,17 @@
+import { Colors } from "@/constants/Colors";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider,
+} from "@react-navigation/native";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
+import { useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Toast, {
   BaseToast,
@@ -14,16 +20,24 @@ import Toast, {
 } from "react-native-toast-message";
 import "../global.css";
 
-const myTheme = {
-  ...DefaultTheme,
-  colors: { ...DefaultTheme.colors },
-};
-
 const queryClient = new QueryClient();
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const colorScheme = useColorScheme();
+  const scheme = colorScheme ?? "light";
+  const theme = Colors[scheme];
+
+  const myTheme = {
+    ...(colorScheme === "dark" ? DarkTheme : DefaultTheme),
+    colors: {
+      ...(colorScheme === "dark" ? DarkTheme.colors : DefaultTheme.colors),
+      background: theme.background,
+      text: theme.text,
+    },
+  };
+
   const [loaded, error] = useFonts({
     "Inter_18pt-Bold": require("../assets/fonts/Inter_18pt-Bold.ttf"),
     "Inter_18pt-Regular": require("../assets/fonts/Inter_18pt-Regular.ttf"),
@@ -92,12 +106,13 @@ export default function RootLayout() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider value={myTheme}>
         <SafeAreaView
-          className="flex-1 bg-white"
+          className="flex-1"
           edges={["right", "bottom", "left"]}
+          style={{ backgroundColor: theme.background }}
         >
           <Slot />
           <Toast config={toastConfig} />
-          <StatusBar style="dark" />
+          <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
         </SafeAreaView>
       </ThemeProvider>
     </QueryClientProvider>
