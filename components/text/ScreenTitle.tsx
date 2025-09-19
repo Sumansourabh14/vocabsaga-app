@@ -1,4 +1,4 @@
-import useCustomTheme from "@/hooks/useCustomTheme";
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import React from "react";
 import { Text } from "react-native";
 

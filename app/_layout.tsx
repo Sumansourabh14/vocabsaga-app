@@ -1,4 +1,5 @@
 import { Colors } from "@/constants/Colors";
+import { CustomThemeProvider } from "@/context/CustomThemeContext";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
   DarkTheme,
@@ -105,15 +106,17 @@ export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider value={myTheme}>
-        <SafeAreaView
-          className="flex-1"
-          edges={["right", "bottom", "left"]}
-          style={{ backgroundColor: theme.background }}
-        >
-          <Slot />
-          <Toast config={toastConfig} />
-          <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
-        </SafeAreaView>
+        <CustomThemeProvider>
+          <SafeAreaView
+            className="flex-1"
+            edges={["right", "bottom", "left"]}
+            style={{ backgroundColor: theme.background }}
+          >
+            <Slot />
+            <Toast config={toastConfig} />
+            <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
+          </SafeAreaView>
+        </CustomThemeProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );
