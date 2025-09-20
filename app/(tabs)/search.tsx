@@ -1,4 +1,5 @@
 import ScreenTitle from "@/components/text/ScreenTitle";
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -8,17 +9,22 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Search() {
   const [text, onChangeText] = useState("");
   const router = useRouter();
+  const theme = useCustomTheme();
 
   return (
     <SafeAreaView className="flex-1">
       <ScreenTitle title="Find a word" />
       <View className="px-4 py-4 flex-row items-center">
-        <View className="flex-1 border-hairline rounded-md flex-row items-center mr-2">
+        <View
+          className="flex-1  flex-row items-center mr-2 border-hairline rounded-md"
+          style={{ borderColor: theme.subtitleText }}
+        >
           <TextInput
             placeholder="Type any word here and search!"
             placeholderTextColor="gray"
             className="py-4 pl-2 font-inter flex-1"
             value={text}
+            style={{ color: theme.text }}
             onChangeText={onChangeText}
             returnKeyType="search"
             onSubmitEditing={() => {
@@ -50,7 +56,7 @@ export default function Search() {
           accessibilityLabel="Search word"
           accessibilityRole="button"
         >
-          <Ionicons name="search-sharp" size={32} />
+          <Ionicons name="search-sharp" size={32} color={theme.iconColor} />
         </Pressable>
       </View>
     </SafeAreaView>
