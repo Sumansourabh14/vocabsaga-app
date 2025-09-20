@@ -169,17 +169,32 @@ export default function Story() {
         }}
       >
         <View style={styles.centeredView}>
-          <View style={styles.modalView}>
+          <View
+            style={[
+              styles.modalView,
+              { backgroundColor: theme.cardBackground },
+            ]}
+          >
             <Pressable
-              style={[styles.button, styles.buttonClose]}
+              style={[styles.button, { backgroundColor: theme.cardBackground }]}
               onPress={() => setModalVisible(!modalVisible)}
             >
-              <Ionicons name="close-circle-outline" size={20} />
+              <Ionicons
+                name="close-circle-outline"
+                size={20}
+                color={theme.iconColor}
+              />
             </Pressable>
-            <Text className="py-4 text-4xl font-playfairBold text-center">
+            <Text
+              className="py-4 text-4xl font-playfairBold text-center"
+              style={{ color: theme.title }}
+            >
               {data.word}
             </Text>
-            <Text className="mb-8 text-lg font-inter text-center">
+            <Text
+              className="mb-8 text-lg font-inter text-center"
+              style={{ color: theme.text }}
+            >
               {data.word_meaning}
             </Text>
             <Pressable
@@ -192,9 +207,19 @@ export default function Story() {
                 })
               }
               className="flex-row gap-2 border-hairline rounded-lg px-4 py-2 items-center"
+              style={{ borderColor: theme.title }}
             >
-              <Text className="font-inter text-sm">See more</Text>
-              <Ionicons name="arrow-forward-circle" size={20} />
+              <Text
+                className="font-inter text-sm"
+                style={{ color: theme.text }}
+              >
+                See more
+              </Text>
+              <Ionicons
+                name="arrow-forward-circle"
+                size={20}
+                color={theme.iconColor}
+              />
             </Pressable>
           </View>
         </View>
@@ -211,7 +236,6 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: "#fff",
     borderRadius: 8,
     padding: 35,
     alignItems: "center",
@@ -228,12 +252,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: 8,
     top: 8,
-  },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#FFFFFF",
   },
   textStyle: {
     color: "black",
