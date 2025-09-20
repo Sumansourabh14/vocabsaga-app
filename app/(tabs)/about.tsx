@@ -18,14 +18,23 @@ export default function About() {
       >
         <View className="items-center">
           <ScreenTitle title="About" />
-          <Text className="font-inter" style={{ color: theme.text }}>
-            {appData.expo.description}
+          <Text
+            className="font-inter px-4 text-center"
+            style={{ color: theme.text }}
+          >
+            Welcome to Vocabsaga, learn new words through passages, not random
+            flashcards
           </Text>
 
           <View
             className="w-full mt-12 px-4 border-t-hairline"
             style={{ borderColor: theme.borderColor }}
           >
+            <SocialNavLink
+              link="https://play.google.com/store/apps/details?id=com.sumsourabh14.vocabsaga"
+              icon="star-outline"
+              title="Leave a review"
+            />
             <SocialNavLink
               link="https://forms.gle/6xkf5GbPMU5YvA1Q8"
               icon="chatbox-ellipses-outline"
