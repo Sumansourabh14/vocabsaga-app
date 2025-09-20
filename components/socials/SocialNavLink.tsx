@@ -16,7 +16,10 @@ const SocialNavLink = ({ link, icon, title }: SocialNavLinkProps) => {
 
   return (
     <Link href={externalLink} asChild>
-      <Pressable className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded">
+      <Pressable
+        className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded"
+        style={{ borderColor: theme.borderColor }}
+      >
         <View className="flex-row items-center">
           <Ionicons
             name={icon}

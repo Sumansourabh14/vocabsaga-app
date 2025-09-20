@@ -7,6 +7,8 @@ export const Colors = {
     iconColor: "#fff",
     buttonBgActive: "#fff",
     cardBackground: "#000",
+    borderColor: "#fff",
+    tabBarActiveColor: "#fff",
   },
   light: {
     background: "#fff",
@@ -16,5 +18,7 @@ export const Colors = {
     iconColor: "#000",
     buttonBgActive: "#000",
     cardBackground: "#fff",
+    borderColor: "#000",
+    tabBarActiveColor: "#000",
   },
 };

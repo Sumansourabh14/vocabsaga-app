@@ -22,7 +22,10 @@ export default function About() {
             {appData.expo.description}
           </Text>
 
-          <View className="w-full mt-12 px-4 border-t-hairline">
+          <View
+            className="w-full mt-12 px-4 border-t-hairline"
+            style={{ borderColor: theme.borderColor }}
+          >
             <SocialNavLink
               link="https://forms.gle/6xkf5GbPMU5YvA1Q8"
               icon="chatbox-ellipses-outline"
@@ -40,7 +43,10 @@ export default function About() {
             />
 
             <Link href={`/privacy`} asChild>
-              <Pressable className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded">
+              <Pressable
+                className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded"
+                style={{ borderColor: theme.borderColor }}
+              >
                 <View className="flex-row items-center">
                   <Ionicons
                     name="document-lock-outline"
@@ -59,7 +65,10 @@ export default function About() {
               </Pressable>
             </Link>
             <Link href={`/termsOfUse`} asChild>
-              <Pressable className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded">
+              <Pressable
+                className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded"
+                style={{ borderColor: theme.borderColor }}
+              >
                 <View className="flex-row items-center">
                   <Ionicons
                     name="document-text-outline"

@@ -64,7 +64,10 @@ export default function Bookmarks() {
               })
             }
             className="flex-1 m-2 rounded-lg px-4 py-6 relative border-hairline"
-            style={{ backgroundColor: theme.cardBackground }}
+            style={{
+              backgroundColor: theme.cardBackground,
+              borderColor: theme.borderColor,
+            }}
           >
             <Pressable
               className="absolute top-2 right-2"

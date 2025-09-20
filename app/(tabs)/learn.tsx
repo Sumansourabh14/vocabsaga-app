@@ -18,7 +18,10 @@ export default function Learn() {
           accessibilityRole="button"
           accessibilityLabel="Learn new words through passages"
           className="rounded-xl border-hairline px-6 py-8 mb-4 flex-row items-center"
-          style={{ backgroundColor: theme.cardBackground }}
+          style={{
+            backgroundColor: theme.cardBackground,
+            borderColor: theme.borderColor,
+          }}
         >
           <Ionicons
             name="book-outline"
