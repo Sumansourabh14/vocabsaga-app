@@ -99,7 +99,7 @@ export default function About() {
         </View>
         <View>
           <Text
-            className="text-center font-inter text-sm"
+            className="text-center font-inter text-sm mt-8"
             style={{ color: theme.subtitleText }}
           >
             Version {appData.expo.version}
