@@ -16,15 +16,20 @@ export default function Search() {
       <ScreenTitle title="Find a word" />
       <View className="px-4 py-4 flex-row items-center">
         <View
-          className="flex-1  flex-row items-center mr-2 border-hairline rounded-md"
-          style={{ borderColor: theme.subtitleText }}
+          className="flex-1 flex-row items-center mr-2 border-hairline rounded-md"
+          style={{
+            borderColor: theme.subtitleText,
+            backgroundColor: theme.cardBackground,
+          }}
         >
           <TextInput
             placeholder="Type any word here and search!"
             placeholderTextColor="gray"
-            className="py-4 pl-2 font-inter flex-1"
+            className="py-4 pl-4 font-inter flex-1"
             value={text}
-            style={{ color: theme.text }}
+            style={{
+              color: theme.text,
+            }}
             onChangeText={onChangeText}
             returnKeyType="search"
             onSubmitEditing={() => {
@@ -39,7 +44,11 @@ export default function Search() {
             autoCorrect={false}
           />
           {text.length > 0 && (
-            <Pressable onPress={() => onChangeText("")} className="mx-2">
+            <Pressable
+              hitSlop={10}
+              onPress={() => onChangeText("")}
+              className="mx-2"
+            >
               <Ionicons name="close-circle" size={22} color="gray" />
             </Pressable>
           )}

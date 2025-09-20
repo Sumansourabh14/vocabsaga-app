@@ -14,7 +14,12 @@ const WordDeepMeanings = ({
     <View className="px-8 pt-4">
       {/* Phonetic */}
       {phonetic && (
-        <Text className="text-gray-600 text-lg font-inter">/{phonetic}/</Text>
+        <Text
+          className="text-lg font-inter"
+          style={{ color: theme.subtitleText }}
+        >
+          /{phonetic}/
+        </Text>
       )}
 
       {/* Origin */}
@@ -59,7 +64,10 @@ const WordDeepMeanings = ({
                   </View>
 
                   {def.example && (
-                    <Text className="text-sm mt-1 text-gray-500 font-inter">
+                    <Text
+                      className="text-sm mt-1 font-inter"
+                      style={{ color: theme.subtitleText }}
+                    >
                       Example: {def.example}
                     </Text>
                   )}
