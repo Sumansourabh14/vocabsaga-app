@@ -1,3 +1,4 @@
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import { DictionaryEntry } from "@/types";
 import { Text, View } from "react-native";
 
@@ -7,6 +8,8 @@ const WordDeepMeanings = ({
   origin,
   meanings,
 }: DictionaryEntry) => {
+  const theme = useCustomTheme();
+
   return (
     <View className="px-8 pt-4">
       {/* Phonetic */}
@@ -17,8 +20,15 @@ const WordDeepMeanings = ({
       {/* Origin */}
       {origin && (
         <View>
-          <Text className="font-semibold">Origin</Text>
-          <Text className="text-sm text-muted-foreground">{origin}</Text>
+          <Text className="font-semibold" style={{ color: theme.title }}>
+            Origin
+          </Text>
+          <Text
+            className="text-sm text-muted-foreground"
+            style={{ color: theme.text }}
+          >
+            {origin}
+          </Text>
         </View>
       )}
 
@@ -26,7 +36,10 @@ const WordDeepMeanings = ({
       <View>
         {meanings.map((meaning, index) => (
           <View key={index} className="mt-2">
-            <Text className="text-lg font-interBold">
+            <Text
+              className="text-lg font-interBold"
+              style={{ color: theme.text }}
+            >
               {meaning.partOfSpeech}
             </Text>
 
@@ -34,8 +47,15 @@ const WordDeepMeanings = ({
               {meaning.definitions.map((def, i) => (
                 <View key={i} className="mb-2">
                   <View className="flex-row gap-1">
-                    <Text className="font-interBold">{i + 1}.</Text>
-                    <Text className="font-inter">{def.definition}</Text>
+                    <Text
+                      className="font-interBold"
+                      style={{ color: theme.text }}
+                    >
+                      {i + 1}.
+                    </Text>
+                    <Text className="font-inter" style={{ color: theme.text }}>
+                      {def.definition}
+                    </Text>
                   </View>
 
                   {def.example && (

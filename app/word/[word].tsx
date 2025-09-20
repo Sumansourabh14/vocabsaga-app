@@ -1,6 +1,7 @@
 import BackBtn from "@/components/iconButtons/BackBtn";
 import BookmarkBtn from "@/components/iconButtons/BookmarkBtn";
 import WordDeepMeanings from "@/components/WordDeepMeanings";
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import useBookmarks from "@/hooks/useBookmarks";
 import useFetchWordMeaning from "@/hooks/useFetchWordMeaning";
 import { useLocalSearchParams } from "expo-router";
@@ -12,6 +13,7 @@ export default function Word() {
   const { word } = useLocalSearchParams<{ word: string }>();
   const { data, isFetching, error } = useFetchWordMeaning(word);
   const { toggleBookmark, isBookmarked } = useBookmarks();
+  const theme = useCustomTheme();
 
   const bookmarked = isBookmarked(word);
 
@@ -33,19 +35,25 @@ export default function Word() {
             isBookmarked={bookmarked}
           />
         </View>
-        <Text className="text-6xl font-playfairBold text-center p-4">
+        <Text
+          className="text-6xl font-playfairBold text-center p-4"
+          style={{ color: theme.title }}
+        >
           {word}
         </Text>
         {isFetching && (
-          <View className="flex-1 justify-center items-center">
-            <ActivityIndicator size="large" color="black" />
-            <Text className="text-center text-md font-inter mt-4">
+          <View className="flex-1 justify-center items-center mt-8">
+            <ActivityIndicator size="large" color={theme.title} />
+            <Text
+              className="text-center text-md font-inter mt-4"
+              style={{ color: theme.text }}
+            >
               Looking up this word...
             </Text>
           </View>
         )}
         {error && (
-          <Text className="text-red-400 text-center mt-4 font-inter">
+          <Text className="text-red-400 text-center mt-4 font-inter mt-8">
             Couldn&apos;t find definitions for this word
           </Text>
         )}
