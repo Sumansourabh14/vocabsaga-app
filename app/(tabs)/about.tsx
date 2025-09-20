@@ -109,7 +109,9 @@ export default function About() {
             style={{ color: theme.subtitleText }}
           >
             &copy; {new Date().getFullYear()} Vocabsaga by{" "}
-            <Link href={`https://x.com/sumansourabh48`}>Suman Sourabh</Link>
+            <Link href={`https://x.com/sumansourabh48`} asChild>
+              <Text className="underline">Suman Sourabh</Text>
+            </Link>
           </Text>
         </View>
       </ScrollView>
