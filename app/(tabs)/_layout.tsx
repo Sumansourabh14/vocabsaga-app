@@ -13,7 +13,7 @@ export default function TabsLayout() {
         tabBarActiveTintColor: theme.tabBarActiveColor,
         tabBarInactiveTintColor: "gray",
         tabBarStyle: {
-          backgroundColor: theme.background,
+          backgroundColor: theme.cardBackground,
         },
       }}
     >
