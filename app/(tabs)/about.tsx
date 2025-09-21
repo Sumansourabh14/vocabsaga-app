@@ -9,7 +9,7 @@ import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function About() {
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <SafeAreaView className="flex-1">
