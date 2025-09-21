@@ -48,7 +48,7 @@ const WordDeepMeanings = ({
               {meaning.partOfSpeech}
             </Text>
 
-            <View>
+            <View className="mt-1">
               {meaning.definitions.map((def, i) => (
                 <View key={i} className="mb-2">
                   <View className="flex-row gap-1">
