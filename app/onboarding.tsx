@@ -1,3 +1,4 @@
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 import React from "react";
@@ -6,6 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Onboarding() {
   const router = useRouter();
+  const { theme } = useCustomTheme();
 
   return (
     <SafeAreaView className="flex-1 justify-center px-6">
@@ -16,20 +18,27 @@ export default function Onboarding() {
             style={{ width: 300, height: 100, resizeMode: "contain" }}
           />
 
-          <Text className="text-gray-700 text-center font-inter text-lg mb-8">
+          <Text
+            className="text-center font-inter text-lg mb-8"
+            style={{ color: theme.title }}
+          >
             Learn vocabulary in a way that sticks.
           </Text>
         </View>
       </View>
 
       <TouchableOpacity
-        className="bg-black px-10 py-4 rounded-xl mb-4"
+        className="px-10 py-4 rounded-xl mb-4"
+        style={{ backgroundColor: theme.title }}
         onPress={async () => {
           await AsyncStorage.setItem("isFirstLaunch", "false");
           router.replace("/learn");
         }}
       >
-        <Text className="text-white text-2xl font-interBold text-center">
+        <Text
+          className="text-2xl font-interBold text-center"
+          style={{ color: theme.cardBackground }}
+        >
           Start Learning
         </Text>
       </TouchableOpacity>
