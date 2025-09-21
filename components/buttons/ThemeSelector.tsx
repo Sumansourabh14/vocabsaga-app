@@ -31,12 +31,15 @@ export default function ThemeSelector() {
               className="font-interBold text-lg"
               style={{ color: theme.text }}
             >
-              Theme:
+              Theme
             </Text>
           </View>
-          <Text className="font-inter text-lg" style={{ color: theme.text }}>
-            {themeMode.charAt(0).toUpperCase() + themeMode.slice(1)}
-          </Text>
+          <View className="flex-row items-center">
+            <Text className="font-inter mr-2" style={{ color: theme.text }}>
+              {themeMode.charAt(0).toUpperCase() + themeMode.slice(1)}
+            </Text>
+            <Ionicons name="arrow-forward-sharp" size={22} color={"gray"} />
+          </View>
         </View>
       </Pressable>
 
