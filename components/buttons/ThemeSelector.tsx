@@ -1,9 +1,10 @@
 import { useCustomTheme } from "@/context/CustomThemeContext";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import React, { useState } from "react";
-import { Button, Modal, Pressable, Text, View } from "react-native";
+import { Modal, Pressable, Text, View } from "react-native";
 
 export default function ThemeSelector() {
-  const { themeMode, setThemeMode } = useCustomTheme();
+  const { theme, themeMode, setThemeMode } = useCustomTheme();
   const [visible, setVisible] = useState(false);
 
   const handleSelect = (mode: "light" | "dark" | "system") => {
@@ -13,33 +14,94 @@ export default function ThemeSelector() {
 
   return (
     <View>
-      {/* Trigger row/button */}
-      <Pressable onPress={() => setVisible(true)}>
-        <Text>Theme: {themeMode}</Text>
+      <Pressable
+        onPress={() => setVisible(true)}
+        className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded"
+        style={{ borderColor: theme.borderColor }}
+      >
+        <View className="flex-row items-center">
+          <Ionicons
+            name="color-palette-outline"
+            size={22}
+            className="mr-2"
+            color={theme.iconColor}
+          />
+          <Text
+            className="font-interBold text-lg"
+            style={{ color: theme.text }}
+          >
+            Theme: {themeMode}
+          </Text>
+        </View>
       </Pressable>
 
-      {/* Modal popup */}
       <Modal
         visible={visible}
         transparent
         animationType="slide"
         onRequestClose={() => setVisible(false)}
+        backdropColor={theme.cardBackground}
       >
-        <View className="flex-1 justify-end bg-black/50">
-          <View className="bg-white dark:bg-gray-900 p-6 rounded-t-2xl">
-            <Text className="text-lg font-bold mb-4">Choose Theme</Text>
+        <View className="flex-1 justify-end bg-black/60">
+          <View
+            className="p-6 rounded-t-2xl"
+            style={{ backgroundColor: theme.background }}
+          >
+            <Text
+              className="text-lg mb-4 font-interBold"
+              style={{ color: theme.title }}
+            >
+              Choose Theme
+            </Text>
 
-            <Pressable onPress={() => handleSelect("light")} className="p-3">
-              <Text>🌞 Light</Text>
-            </Pressable>
-            <Pressable onPress={() => handleSelect("dark")} className="p-3">
-              <Text>🌙 Dark</Text>
-            </Pressable>
-            <Pressable onPress={() => handleSelect("system")} className="p-3">
-              <Text>⚙️ System Default</Text>
+            <Pressable
+              onPress={() => handleSelect("light")}
+              className="flex-row items-center justify-between py-4"
+            >
+              <Text style={{ color: theme.text }} className="font-inter">
+                Light
+              </Text>
+              {themeMode === "light" && (
+                <Ionicons name="checkmark" size={20} color={theme.iconColor} />
+              )}
             </Pressable>
 
-            <Button title="Cancel" onPress={() => setVisible(false)} />
+            <Pressable
+              onPress={() => handleSelect("dark")}
+              className="flex-row items-center justify-between py-4"
+            >
+              <Text style={{ color: theme.text }} className="font-inter">
+                Dark
+              </Text>
+              {themeMode === "dark" && (
+                <Ionicons name="checkmark" size={20} color={theme.iconColor} />
+              )}
+            </Pressable>
+
+            <Pressable
+              onPress={() => handleSelect("system")}
+              className="flex-row items-center justify-between py-4"
+            >
+              <Text style={{ color: theme.text }} className="font-inter">
+                System Default
+              </Text>
+              {themeMode === "system" && (
+                <Ionicons name="checkmark" size={20} color={theme.iconColor} />
+              )}
+            </Pressable>
+
+            <Pressable
+              onPress={() => setVisible(false)}
+              className="p-4 rounded mt-4"
+              style={{ backgroundColor: theme.title }}
+            >
+              <Text
+                className="text-center font-interBold"
+                style={{ color: theme.cardBackground }}
+              >
+                Cancel
+              </Text>
+            </Pressable>
           </View>
         </View>
       </Modal>

@@ -1,5 +1,7 @@
-import { Colors } from "@/constants/Colors";
-import { CustomThemeProvider } from "@/context/CustomThemeContext";
+import {
+  CustomThemeProvider,
+  useCustomTheme,
+} from "@/context/CustomThemeContext";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
   DarkTheme,
@@ -26,19 +28,6 @@ const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const scheme = colorScheme ?? "light";
-  const theme = Colors[scheme];
-
-  const myTheme = {
-    ...(colorScheme === "dark" ? DarkTheme : DefaultTheme),
-    colors: {
-      ...(colorScheme === "dark" ? DarkTheme.colors : DefaultTheme.colors),
-      background: theme.background,
-      text: theme.text,
-    },
-  };
-
   const [loaded, error] = useFonts({
     "Inter_18pt-Bold": require("../assets/fonts/Inter_18pt-Bold.ttf"),
     "Inter_18pt-Regular": require("../assets/fonts/Inter_18pt-Regular.ttf"),
@@ -55,6 +44,29 @@ export default function RootLayout() {
   if (!loaded && !error) {
     return null;
   }
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <CustomThemeProvider>
+        <AppContent />
+      </CustomThemeProvider>
+    </QueryClientProvider>
+  );
+}
+
+function AppContent() {
+  const { theme, themeMode } = useCustomTheme();
+  const colorScheme = useColorScheme();
+
+  // React Navigation theme (optional)
+  const navTheme = {
+    ...(themeMode === "dark" ? DarkTheme : DefaultTheme),
+    colors: {
+      ...(themeMode === "dark" ? DarkTheme.colors : DefaultTheme.colors),
+      background: theme.background,
+      text: theme.text,
+    },
+  };
 
   const toastConfig: ToastConfig = {
     success: (props) => (
@@ -104,20 +116,26 @@ export default function RootLayout() {
   };
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider value={myTheme}>
-        <CustomThemeProvider>
-          <SafeAreaView
-            className="flex-1"
-            edges={["right", "bottom", "left"]}
-            style={{ backgroundColor: theme.background }}
-          >
-            <Slot />
-            <Toast config={toastConfig} />
-            <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
-          </SafeAreaView>
-        </CustomThemeProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
+    <ThemeProvider value={navTheme}>
+      <SafeAreaView
+        className="flex-1"
+        edges={["right", "bottom", "left"]}
+        style={{ backgroundColor: theme.background }}
+      >
+        <Slot />
+        <Toast config={toastConfig} />
+        <StatusBar
+          style={
+            themeMode === "system"
+              ? colorScheme === "dark"
+                ? "light"
+                : "dark" // use actual device scheme
+              : themeMode === "dark"
+                ? "light"
+                : "dark"
+          }
+        />
+      </SafeAreaView>
+    </ThemeProvider>
   );
 }

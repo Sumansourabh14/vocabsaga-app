@@ -1,4 +1,5 @@
 import appData from "@/app.json";
+import ThemeSelector from "@/components/buttons/ThemeSelector";
 import SocialNavLink from "@/components/socials/SocialNavLink";
 import ScreenTitle from "@/components/text/ScreenTitle";
 import { useCustomTheme } from "@/context/CustomThemeContext";
@@ -95,6 +96,7 @@ export default function About() {
                 <Ionicons name="arrow-forward-sharp" size={22} color={"gray"} />
               </Pressable>
             </Link>
+            <ThemeSelector />
           </View>
         </View>
         <View>
