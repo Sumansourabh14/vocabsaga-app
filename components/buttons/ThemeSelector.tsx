@@ -16,21 +16,26 @@ export default function ThemeSelector() {
     <View>
       <Pressable
         onPress={() => setVisible(true)}
-        className="flex-row items-center justify-between w-full p-4 py-6 border-b-hairline rounded"
+        className="w-full p-4 py-6 border-b-hairline rounded"
         style={{ borderColor: theme.borderColor }}
       >
-        <View className="flex-row items-center">
-          <Ionicons
-            name="color-palette-outline"
-            size={22}
-            className="mr-2"
-            color={theme.iconColor}
-          />
-          <Text
-            className="font-interBold text-lg"
-            style={{ color: theme.text }}
-          >
-            Theme: {themeMode}
+        <View className="flex-row justify-between items-center">
+          <View className="flex-row items-center">
+            <Ionicons
+              name="color-palette-outline"
+              size={22}
+              className="mr-2"
+              color={theme.iconColor}
+            />
+            <Text
+              className="font-interBold text-lg"
+              style={{ color: theme.text }}
+            >
+              Theme:
+            </Text>
+          </View>
+          <Text className="font-inter text-lg" style={{ color: theme.text }}>
+            {themeMode.charAt(0).toUpperCase() + themeMode.slice(1)}
           </Text>
         </View>
       </Pressable>
