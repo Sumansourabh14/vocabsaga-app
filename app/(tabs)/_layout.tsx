@@ -5,7 +5,7 @@ import React from "react";
 import { Text } from "react-native";
 
 export default function TabsLayout() {
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <Tabs

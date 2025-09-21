@@ -6,7 +6,7 @@ import { Pressable } from "react-native";
 
 export default function BackBtn() {
   const router = useRouter();
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   const handleBackNavigation = () => {
     router.back();

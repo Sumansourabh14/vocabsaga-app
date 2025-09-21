@@ -12,7 +12,7 @@ export default function BookmarkBtn({
   isBookmarked,
   handleBookmarking,
 }: BookmarkBtnProps) {
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <Pressable onPress={handleBookmarking}>

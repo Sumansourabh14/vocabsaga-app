@@ -3,7 +3,7 @@ import React from "react";
 import { Text } from "react-native";
 
 export default function ScreenTitle({ title }: { title: string }) {
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <Text

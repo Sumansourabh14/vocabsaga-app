@@ -9,7 +9,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Search() {
   const [text, onChangeText] = useState("");
   const router = useRouter();
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <SafeAreaView className="flex-1">

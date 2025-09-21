@@ -12,7 +12,7 @@ type SocialNavLinkProps = {
 
 const SocialNavLink = ({ link, icon, title }: SocialNavLinkProps) => {
   const externalLink = link as `https://${string}`;
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <Link href={externalLink} asChild>

@@ -7,7 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Learn() {
   const router = useRouter();
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <SafeAreaView className="flex-1">

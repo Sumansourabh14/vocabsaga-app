@@ -16,7 +16,7 @@ dayjs.extend(relativeTime);
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const router = useRouter();
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   const getBookmarks = async () => {
     const res = await fetchBookmarks();

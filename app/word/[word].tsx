@@ -13,7 +13,7 @@ export default function Word() {
   const { word } = useLocalSearchParams<{ word: string }>();
   const { data, isFetching, error } = useFetchWordMeaning(word);
   const { toggleBookmark, isBookmarked } = useBookmarks();
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   const bookmarked = isBookmarked(word);
 
@@ -53,7 +53,7 @@ export default function Word() {
           </View>
         )}
         {error && (
-          <Text className="text-red-400 text-center mt-4 font-inter mt-8">
+          <Text className="text-red-400 text-center font-inter mt-8">
             Couldn&apos;t find definitions for this word
           </Text>
         )}

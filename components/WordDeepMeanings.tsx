@@ -8,7 +8,7 @@ const WordDeepMeanings = ({
   origin,
   meanings,
 }: DictionaryEntry) => {
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   return (
     <View className="px-8 pt-4">

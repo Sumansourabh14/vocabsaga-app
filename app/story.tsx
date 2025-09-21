@@ -27,7 +27,7 @@ export default function Story() {
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const data = passages[current];
   const router = useRouter();
-  const theme = useCustomTheme();
+  const { theme } = useCustomTheme();
 
   const handleRandom = () => {
     if (passages.length === 0) return;
