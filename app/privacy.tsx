@@ -127,6 +127,7 @@ export default function PrivacyPolicy() {
               onPress={() => router.push("https://forms.gle/6xkf5GbPMU5YvA1Q8")}
               accessible={true}
               accessibilityLabel="Open feedback form"
+              style={{ color: theme.subtitleText }}
             >
               forms.gle/6xkf5GbPMU5YvA1Q8
             </Text>
