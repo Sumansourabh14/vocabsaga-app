@@ -1,4 +1,6 @@
+import WordLimitSelector from "@/components/buttons/WordLimitSelector";
 import BackBtn from "@/components/iconButtons/BackBtn";
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import rawPassages from "@/data/passages/p1.json";
 import { BookmarkedWord, WordPassage } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -25,6 +27,7 @@ export default function Story() {
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const data = passages[current];
   const router = useRouter();
+  const { theme } = useCustomTheme();
 
   const handleRandom = () => {
     if (passages.length === 0) return;
@@ -133,56 +136,26 @@ export default function Story() {
         {data.difficulty_level.slice(1)}
       </Text>
 
-      <View className="flex-row items-center gap-2 my-8">
-        <Pressable
-          onPress={() => setWordLimit("15")}
-          className={`px-6 py-2 rounded-lg border ${
-            wordLimit === "15" ? "bg-black" : "border-gray-300"
-          }`}
-        >
-          <Text
-            className={`text-sm ${
-              wordLimit === "15"
-                ? "text-white font-interBold"
-                : "text-gray-700 font-inter"
-            }`}
-          >
-            Short
-          </Text>
-        </Pressable>
+      <WordLimitSelector wordLimit={wordLimit} setWordLimit={setWordLimit} />
 
-        <Pressable
-          onPress={() => setWordLimit("30")}
-          className={`px-4 py-2 rounded-lg border ${
-            wordLimit === "30" ? "bg-black" : "border-gray-300"
-          }`}
-        >
-          <Text
-            className={`text-sm ${
-              wordLimit === "30"
-                ? "text-white font-interBold"
-                : "text-gray-700 font-inter"
-            }`}
-          >
-            Detailed
-          </Text>
-        </Pressable>
-      </View>
-
-      <Text className="text-center text-2xl mb-8 font-inter">
+      <Text
+        className="text-center text-2xl mb-8 font-inter"
+        style={{ color: theme.text }}
+      >
         {highlightWordInPassage(data.passages[wordLimit], data.word)}
       </Text>
       <View className="flex flex-row gap-6">
         <Pressable onPress={handleRandom}>
-          <Ionicons name="shuffle" size={32} />
+          <Ionicons name="shuffle" size={32} color={theme.iconColor} />
         </Pressable>
         <Pressable onPress={() => setModalVisible(true)}>
-          <Ionicons name="eye" size={32} />
+          <Ionicons name="eye" size={32} color={theme.iconColor} />
         </Pressable>
         <Pressable onPress={handleBookmarking}>
           <Ionicons
             name={isBookmarked ? "bookmark" : "bookmark-outline"}
             size={32}
+            color={theme.iconColor}
           />
         </Pressable>
       </View>
@@ -196,17 +169,32 @@ export default function Story() {
         }}
       >
         <View style={styles.centeredView}>
-          <View style={styles.modalView}>
+          <View
+            style={[
+              styles.modalView,
+              { backgroundColor: theme.cardBackground },
+            ]}
+          >
             <Pressable
-              style={[styles.button, styles.buttonClose]}
+              style={[styles.button, { backgroundColor: theme.cardBackground }]}
               onPress={() => setModalVisible(!modalVisible)}
             >
-              <Ionicons name="close-circle-outline" size={20} />
+              <Ionicons
+                name="close-circle-outline"
+                size={20}
+                color={theme.iconColor}
+              />
             </Pressable>
-            <Text className="py-4 text-4xl font-playfairBold text-center">
+            <Text
+              className="py-4 text-4xl font-playfairBold text-center"
+              style={{ color: theme.title }}
+            >
               {data.word}
             </Text>
-            <Text className="mb-8 text-lg font-inter text-center">
+            <Text
+              className="mb-8 text-lg font-inter text-center"
+              style={{ color: theme.text }}
+            >
               {data.word_meaning}
             </Text>
             <Pressable
@@ -219,9 +207,19 @@ export default function Story() {
                 })
               }
               className="flex-row gap-2 border-hairline rounded-lg px-4 py-2 items-center"
+              style={{ borderColor: theme.title }}
             >
-              <Text className="font-inter text-sm">See more</Text>
-              <Ionicons name="arrow-forward-circle" size={20} />
+              <Text
+                className="font-inter text-sm"
+                style={{ color: theme.text }}
+              >
+                See more
+              </Text>
+              <Ionicons
+                name="arrow-forward-circle"
+                size={20}
+                color={theme.iconColor}
+              />
             </Pressable>
           </View>
         </View>
@@ -238,7 +236,6 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: "#fff",
     borderRadius: 8,
     padding: 35,
     alignItems: "center",
@@ -255,12 +252,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: 8,
     top: 8,
-  },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#FFFFFF",
   },
   textStyle: {
     color: "black",

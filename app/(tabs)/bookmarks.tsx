@@ -1,4 +1,5 @@
 import ScreenTitle from "@/components/text/ScreenTitle";
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import { fetchBookmarks, updateBookmarks } from "@/services/bookmarking";
 import { BookmarkedWord } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -15,6 +16,7 @@ dayjs.extend(relativeTime);
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const router = useRouter();
+  const { theme } = useCustomTheme();
 
   const getBookmarks = async () => {
     const res = await fetchBookmarks();
@@ -61,7 +63,11 @@ export default function Bookmarks() {
                 params: { word: item.word },
               })
             }
-            className="flex-1 m-2 rounded-lg px-4 py-6 relative bg-white border-hairline"
+            className="flex-1 m-2 rounded-lg px-4 py-6 relative border-hairline"
+            style={{
+              backgroundColor: theme.cardBackground,
+              borderColor: theme.borderColor,
+            }}
           >
             <Pressable
               className="absolute top-2 right-2"
@@ -70,9 +76,14 @@ export default function Bookmarks() {
                 removeBookmark(item.id, item.word);
               }}
             >
-              <Ionicons name="bookmark" size={24} color="black" />
+              <Ionicons name="bookmark" size={24} color={theme.iconColor} />
             </Pressable>
-            <Text className="text-xl font-interBold">{item.word}</Text>
+            <Text
+              className="text-xl font-interBold"
+              style={{ color: theme.title }}
+            >
+              {item.word}
+            </Text>
             <Text className="text-sm text-neutral-500 mt-2 font-inter">
               {dayjs(item.createdAt).fromNow()}
             </Text>

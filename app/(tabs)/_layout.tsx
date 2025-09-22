@@ -1,13 +1,20 @@
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Tabs } from "expo-router";
 import React from "react";
 import { Text } from "react-native";
 
 export default function TabsLayout() {
+  const { theme } = useCustomTheme();
+
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#000",
+        tabBarActiveTintColor: theme.tabBarActiveColor,
+        tabBarInactiveTintColor: "gray",
+        tabBarStyle: {
+          backgroundColor: theme.cardBackground,
+        },
       }}
     >
       <Tabs.Screen

@@ -1,3 +1,4 @@
+import { useCustomTheme } from "@/context/CustomThemeContext";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
@@ -6,6 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const router = useRouter();
+  const { theme } = useCustomTheme();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -30,8 +32,11 @@ export default function Index() {
 
   if (isLoading) {
     return (
-      <SafeAreaView className="flex-1 bg-white justify-center items-center">
-        <ActivityIndicator size="large" color="#000" />
+      <SafeAreaView
+        className="flex-1 justify-center items-center"
+        style={{ backgroundColor: theme.background }}
+      >
+        <ActivityIndicator size="large" color={theme.iconColor} />
       </SafeAreaView>
     );
   }
