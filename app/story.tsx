@@ -148,7 +148,7 @@ export default function Story() {
         <Pressable onPress={handleRandom}>
           <Ionicons name="shuffle" size={32} color={theme.iconColor} />
         </Pressable>
-        <Pressable onPress={() => setModalVisible(true)}>
+        <Pressable onPress={() => setModalVisible(true)} testID="eye-btn">
           <Ionicons name="eye" size={32} color={theme.iconColor} />
         </Pressable>
         <Pressable onPress={handleBookmarking}>
