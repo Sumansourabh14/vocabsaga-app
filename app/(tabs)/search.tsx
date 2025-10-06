@@ -23,6 +23,7 @@ export default function Search() {
           }}
         >
           <TextInput
+            testID="word-input"
             placeholder="Type any word here and search!"
             placeholderTextColor="gray"
             className="py-4 pl-4 font-inter flex-1"
@@ -45,6 +46,7 @@ export default function Search() {
           />
           {text.length > 0 && (
             <Pressable
+              testID="reset-input"
               hitSlop={10}
               onPress={() => onChangeText("")}
               className="mx-2"
@@ -64,6 +66,7 @@ export default function Search() {
           className={text.length === 0 ? "opacity-40" : "opacity-100"}
           accessibilityLabel="Search word"
           accessibilityRole="button"
+          testID="search-btn"
         >
           <Ionicons name="search-sharp" size={32} color={theme.iconColor} />
         </Pressable>
