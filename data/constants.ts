@@ -2,6 +2,8 @@ export const SITE_TITLE = "Vocabsaga";
 
 export const WORDS_API_URL = "https://api.dictionaryapi.dev/api/v2/entries/en";
 
+export const QUOTES_API_URL = "https://recite-flax.vercel.app";
+
 export const ALL_WORDS_PARENT_URL = "https://random-word-api.herokuapp.com";
 
 export const wordsUrls = {

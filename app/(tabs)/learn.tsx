@@ -12,7 +12,7 @@ export default function Learn() {
   return (
     <SafeAreaView className="flex-1">
       <ScreenTitle title="Learn words" />
-      <View className="mt-6 px-6">
+      <View className="mt-8 px-6">
         <Pressable
           onPress={() => router.push("/story")}
           accessibilityRole="button"
@@ -38,6 +38,34 @@ export default function Learn() {
             </Text>
             <Text className="font-inter" style={{ color: theme.subtitleText }}>
               Understand new words in context by reading sentences
+            </Text>
+          </View>
+        </Pressable>
+        <Pressable
+          onPress={() => router.push("/quote")}
+          accessibilityRole="button"
+          accessibilityLabel="Discover random quotes"
+          className="rounded-xl border-hairline px-6 py-8 mb-4 flex-row items-center"
+          style={{
+            backgroundColor: theme.cardBackground,
+            borderColor: theme.borderColor,
+          }}
+        >
+          <Ionicons
+            name="text-outline"
+            size={48}
+            color="#4B5563"
+            className="mr-6"
+          />
+          <View className="flex-1">
+            <Text
+              className="text-lg font-interBold mb-2"
+              style={{ color: theme.text }}
+            >
+              Discover random quotes
+            </Text>
+            <Text className="font-inter" style={{ color: theme.subtitleText }}>
+              Browse thoughtful quotes, one at a time
             </Text>
           </View>
         </Pressable>
