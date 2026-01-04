@@ -12,6 +12,7 @@
     "build-dev-android": "eas build --platform android --profile development",
     "build-preview-android": "eas build --platform android --profile preview",
     "build-production-android": "eas build --platform android --profile production",
+    "submit-android": "eas submit --platform android",
     "test": "jest --watchAll"
   },
   "jest": {
