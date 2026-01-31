@@ -30,7 +30,7 @@ export default function TabsLayout() {
               }}
               className="mt-1 text-[10px] font-interBold"
             >
-              Learn
+              Home
             </Text>
           ),
           headerShown: false,
