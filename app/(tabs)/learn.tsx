@@ -11,7 +11,7 @@ export default function Learn() {
 
   return (
     <SafeAreaView className="flex-1">
-      <ScreenTitle title="Learn words" />
+      <ScreenTitle title="Home" />
       <View className="mt-8 px-6">
         <Pressable
           onPress={() => router.push("/story")}
@@ -31,13 +31,13 @@ export default function Learn() {
           />
           <View className="flex-1">
             <Text
-              className="text-lg font-interBold mb-2"
+              className="text-xl font-interBold mb-2"
               style={{ color: theme.text }}
             >
-              Learn through passages
+              Learn through reading
             </Text>
             <Text className="font-inter" style={{ color: theme.subtitleText }}>
-              Understand new words in context by reading sentences
+              Pick up new words naturally from real novel passages
             </Text>
           </View>
         </Pressable>
@@ -59,13 +59,13 @@ export default function Learn() {
           />
           <View className="flex-1">
             <Text
-              className="text-lg font-interBold mb-2"
+              className="text-xl font-interBold mb-2"
               style={{ color: theme.text }}
             >
-              Discover random quotes
+              Read a random quote
             </Text>
             <Text className="font-inter" style={{ color: theme.subtitleText }}>
-              Browse thoughtful quotes, one at a time
+              A thoughtful line from literature, one at a time
             </Text>
           </View>
         </Pressable>
