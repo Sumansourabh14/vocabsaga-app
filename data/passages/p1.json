@@ -30,5 +30,53 @@
       "goodreads": "https://www.goodreads.com/book/show/215585837-normal-people",
       "amazon": ""
     }
+  },
+  {
+    "id": "3",
+    "passage": "What possessed her to indulge in such a performance in the sight of the sparrows, blackbirds, and unperceived farmer who were alone its spectators,—whether the smile began as a factitious one, to test her capacity in that art,—nobody knows; it ended certainly in a real smile. She blushed at herself, and seeing her reflection blush, blushed the more.",
+    "word": "factitious",
+    "inferred_meaning": "artificial, rather than genuinely felt",
+    "part_of_speech": "adjective",
+    "difficulty_level": "easy",
+    "book": {
+      "name": "Far from the Madding Crowd",
+      "author": "Thomas Hardy"
+    },
+    "book_links": {
+      "goodreads": "https://www.goodreads.com/book/show/58142615-far-from-the-madding-crowd",
+      "amazon": ""
+    }
+  },
+  {
+    "id": "4",
+    "passage": "Oak knew her instantly as the heroine of the yellow waggon, myrtles, and looking-glass: prosily, as the woman who owed him twopence.",
+    "word": "prosily",
+    "inferred_meaning": "in a plain, practical, and unromantic way",
+    "part_of_speech": "adverb",
+    "difficulty_level": "medium",
+    "book": {
+      "name": "Far from the Madding Crowd",
+      "author": "Thomas Hardy"
+    },
+    "book_links": {
+      "goodreads": "https://www.goodreads.com/book/show/58142615-far-from-the-madding-crowd",
+      "amazon": ""
+    }
+  },
+  {
+    "id": "5",
+    "passage": "Soon soft spirts alternating with loud spirts came in regular succession from within the shed, the obvious sounds of a person milking a cow.",
+    "word": "spirts",
+    "inferred_meaning": "short bursts or spurts of liquid or sound",
+    "part_of_speech": "noun",
+    "difficulty_level": "medium",
+    "book": {
+      "name": "Far from the Madding Crowd",
+      "author": "Thomas Hardy"
+    },
+    "book_links": {
+      "goodreads": "https://www.goodreads.com/book/show/58142615-far-from-the-madding-crowd",
+      "amazon": ""
+    }
   }
 ]
