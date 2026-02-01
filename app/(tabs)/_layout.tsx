@@ -30,7 +30,7 @@ export default function TabsLayout() {
               }}
               className="mt-1 text-[10px] font-interBold"
             >
-              Learn
+              Home
             </Text>
           ),
           headerShown: false,
@@ -50,25 +50,6 @@ export default function TabsLayout() {
               className="mt-1 text-[10px] font-interBold"
             >
               Bookmarks
-            </Text>
-          ),
-          headerShown: false,
-        }}
-      />
-      <Tabs.Screen
-        name="search"
-        options={{
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="search" size={24} color={color} />
-          ),
-          tabBarLabel: ({ color }) => (
-            <Text
-              style={{
-                color,
-              }}
-              className="mt-1 text-[10px] font-interBold"
-            >
-              Search
             </Text>
           ),
           headerShown: false,

@@ -5,6 +5,6 @@ describe("Learn", () => {
   it("renders without crashing", () => {
     const { getByText } = render(<Learn />);
 
-    getByText("Learn words");
+    getByText("Home");
   });
 });

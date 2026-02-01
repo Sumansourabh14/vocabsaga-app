@@ -1,4 +1,3 @@
-import WordLimitSelector from "@/components/buttons/WordLimitSelector";
 import BackBtn from "@/components/iconButtons/BackBtn";
 import { useCustomTheme } from "@/context/CustomThemeContext";
 import rawPassages from "@/data/passages/p1.json";
@@ -20,10 +19,9 @@ const difficultyColors: Record<string, string> = {
 
 export default function Story() {
   const [current, setCurrent] = useState(
-    Math.floor(Math.random() * passages.length)
+    Math.floor(Math.random() * passages.length),
   );
   const [modalVisible, setModalVisible] = useState(false);
-  const [wordLimit, setWordLimit] = useState("15");
   const [bookmarks, setBookmarks] = useState<BookmarkedWord[]>([]);
   const data = passages[current];
   const router = useRouter();
@@ -50,7 +48,7 @@ export default function Story() {
     ].filter((form): form is string => !!form); // Type guard to ensure string
 
     const escapedForms = forms.map((w) =>
-      w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+      w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
     );
     const regex = new RegExp(`\\b(${escapedForms.join("|")})\\b`, "gi");
 
@@ -61,7 +59,7 @@ export default function Story() {
         </Text>
       ) : (
         <Text key={index}>{part}</Text>
-      )
+      ),
     );
   };
 
@@ -136,14 +134,29 @@ export default function Story() {
         {data.difficulty_level.slice(1)}
       </Text>
 
-      <WordLimitSelector wordLimit={wordLimit} setWordLimit={setWordLimit} />
-
       <Text
-        className="text-center text-2xl mb-8 font-inter"
+        className="text-center text-xl font-inter mt-8"
         style={{ color: theme.text }}
       >
-        {highlightWordInPassage(data.passages[wordLimit], data.word)}
+        {highlightWordInPassage(data.passage, data.word)}
       </Text>
+
+      <View className="my-8">
+        <Text
+          className="text-center text-xl font-interBold"
+          style={{ color: theme.text }}
+        >
+          {data.book.name}
+        </Text>
+
+        <Text
+          className="text-center text-lg font-inter"
+          style={{ color: theme.text }}
+        >
+          {data.book.author}
+        </Text>
+      </View>
+
       <View className="flex flex-row gap-6">
         <Pressable onPress={handleRandom}>
           <Ionicons name="shuffle" size={32} color={theme.iconColor} />
@@ -195,7 +208,7 @@ export default function Story() {
               className="mb-8 text-lg font-inter text-center"
               style={{ color: theme.text }}
             >
-              {data.word_meaning}
+              {data.inferred_meaning}
             </Text>
             <Pressable
               onPress={() =>
